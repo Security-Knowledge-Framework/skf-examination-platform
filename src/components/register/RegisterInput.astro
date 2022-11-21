@@ -1,0 +1,25 @@
+---
+import { RegisterInput } from "./RegisterInput";
+---
+
+<div class="wrapper">
+  <h1>Register</h1>
+  <RegisterInput client:load />
+</div>
+
+<style>
+  .wrapper :global(form) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .wrapper :global(input) {
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+</style>

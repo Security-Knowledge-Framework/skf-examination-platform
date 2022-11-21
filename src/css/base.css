@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1140px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}

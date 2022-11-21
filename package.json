@@ -13,8 +13,10 @@
     "check:format": "prettier --check ."
   },
   "dependencies": {
+    "@astrojs/solid-js": "^1.2.3",
     "@supabase/supabase-js": "^2.1.0",
-    "astro": "^1.6.10"
+    "astro": "^1.6.10",
+    "solid-js": "^1.6.2"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
