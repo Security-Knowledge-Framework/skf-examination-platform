@@ -1,5 +1,5 @@
 import { createStore } from "solid-js/store";
-import { registerUser } from "../../utils/users/registerUser";
+import { registerUser } from "../../db/users/registerUser";
 
 type FormFields = {
   [key in fields]: string;

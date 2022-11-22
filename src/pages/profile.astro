@@ -2,9 +2,11 @@
 import Baselayout from "../layouts/Baselayout.astro";
 import { Profile } from "../components/profile/Profile";
 import { Logout } from "../components/profile/Logout";
+import { LoadUser } from "../components/LoadUser";
 ---
 
 <Baselayout title="SKF | Profile">
+  <LoadUser client:load />
   <h1>User Profile</h1>
   <Profile client:load />
   <Logout client:load />

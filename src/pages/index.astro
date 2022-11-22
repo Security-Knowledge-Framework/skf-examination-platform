@@ -1,7 +1,9 @@
 ---
+import { LoadUser } from "../components/LoadUser";
 import Baselayout from "../layouts/Baselayout.astro";
 ---
 
 <Baselayout title="SKF">
+  <LoadUser client:load />
   <h1>SKF</h1>
 </Baselayout>

@@ -1,16 +1,13 @@
-import { createResource, Show } from "solid-js";
-
-import { getUserData } from "../../utils/users/getUserData";
+import { Show } from "solid-js";
+import type { User } from "@supabase/supabase-js";
+import { user } from "../../stores/user";
+import { isObjEmpty } from "../../utils/utils";
 
 export function Profile() {
-  const [user] = createResource(async () => {
-    return await getUserData();
-  });
-
+  const user_ = user as User;
   return (
-    <Show when={user()} fallback={<p>Loading...</p>}>
-      {/* <p>Profile page for {JSON.stringify(user(), null, 2)}</p> */}
-      <p>{user()?.email}</p>
+    <Show when={!isObjEmpty(user)} fallback={<p>Loading...</p>}>
+      <p>email: {user_.email}</p>
     </Show>
   );
 }

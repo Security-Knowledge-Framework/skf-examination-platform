@@ -1,4 +1,8 @@
 import { createSignal, Show } from "solid-js";
+import {
+  loginWithGithub,
+  loginWithGoogle,
+} from "../../db/users/loginWithProvider";
 import { useForm } from "./loginForm";
 
 export function LoginInpout() {
@@ -59,8 +63,12 @@ export function LoginInpout() {
         <input type="submit" value="Sign In" />
       </form>
       <p>Or sign in with</p>
-      <button class="sign-with">Github</button>
-      <button class="sign-with">Google</button>
+      <button class="sign-with" onclick={loginWithGithub}>
+        Github
+      </button>
+      <button class="sign-with" onclick={loginWithGoogle}>
+        Google
+      </button>
       <div class="new-user">
         <span>
           New user? <a href="/register">Register</a>
