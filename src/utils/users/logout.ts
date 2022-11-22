@@ -1,0 +1,10 @@
+import { supabase } from "../db/db";
+
+export async function logout() {
+  const { error } = await supabase.auth.signOut();
+  if (error) {
+    console.log(error);
+    return { error: true, message: error.message };
+  }
+  return { error: false };
+}

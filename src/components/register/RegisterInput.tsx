@@ -1,5 +1,5 @@
 import { Component, createSignal, Show } from "solid-js";
-import { useForm } from "./useForm";
+import { useForm } from "./useRegisterForm";
 
 export const RegisterInput: Component = () => {
   const { form, updateFormField, submit } = useForm();
@@ -30,6 +30,10 @@ export const RegisterInput: Component = () => {
       setError(message);
     } else {
       setMessage("Registration successful");
+      setInterval(() => {
+        setMessage("");
+        location.href = "/login";
+      }, 3000);
     }
   }
 
