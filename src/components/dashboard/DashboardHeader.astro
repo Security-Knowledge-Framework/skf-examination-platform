@@ -1,0 +1,86 @@
+---
+const name = "Fiorela";
+const lastLab = {
+  name: "HTML injection",
+  url: "/",
+};
+const numbers = {
+  labs: 20,
+  hours: 16.4,
+};
+---
+
+<div class="dashboard-header">
+  <div class="welcome">
+    <p>Hi, {name}</p>
+    <p>
+      Welcome to the new "Dashboard" here at SKF. This will be your hub to all
+      the labs we offer and your learning progress.<br />
+      We hope you will continue to learn with us.
+    </p>
+    <div class="links">
+      <a href={lastLab.url}>Continue {lastLab.name}</a>
+      <a href="/">Browse Labs</a>
+    </div>
+  </div>
+
+  <div class="goals">
+    <p>Good job!</p>
+    <div class="week">
+      <h5>This Week</h5>
+      <p>{1} days</p>
+      <ul>
+        <li>M</li>
+        <li>T</li>
+        <li>W</li>
+        <li>T</li>
+        <li>F</li>
+        <li>S</li>
+        <li>S</li>
+      </ul>
+    </div>
+    <div class="numbers">
+      <div class="item-number">
+        {numbers.labs + (numbers.labs == 1 ? " lab" : " labs")}
+      </div>
+      <div class="item-number">
+        {numbers.hours + (numbers.hours == 1 ? " hour" : " hours")}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .dashboard-header {
+    width: 100%;
+    border: 1px solid;
+
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .dashboard-header .welcome {
+    width: 50%;
+    padding: 24px;
+  }
+
+  .dashboard-header .goals {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 24px;
+    background-color: aliceblue;
+    border: 1px solid;
+    position: absolute;
+    top: -24px;
+    right: 120px;
+  }
+
+  .goals ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    list-style: none;
+  }
+</style>

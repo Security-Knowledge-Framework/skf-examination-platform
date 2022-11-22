@@ -1,0 +1,93 @@
+---
+export interface Props {
+  color: string;
+  percentage: number;
+}
+
+let { color, percentage } = Astro.props as Props;
+---
+
+<div class="single-chart">
+  <svg viewBox="0 0 36 36" class="circular-chart" style={`stroke: ${color};`}>
+    <path
+      class="circle-bg"
+      d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+    ></path>
+    <path
+      class="circle"
+      stroke-dasharray={`${percentage}, 100`}
+      d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+    ></path>
+  </svg>
+</div>
+
+<style>
+  .single-chart {
+    width: 22%;
+    justify-content: space-around;
+  }
+
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+    margin-bottom: 20px;
+  }
+
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+
+  :global(.darkmode) .circle-bg {
+    stroke: #6a6a6a;
+  }
+
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+  }
+
+  .animate {
+    animation: progress 1.5s ease-out forwards;
+  }
+
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+
+  .percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+    stroke-width: 0;
+  }
+
+  :global(.darkmode) .percentage {
+    fill: #fff;
+  }
+
+  @media only screen and (max-width: 1120px) {
+    .single-chart {
+      width: 48%;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .single-chart {
+      width: 100%;
+    }
+  }
+</style>

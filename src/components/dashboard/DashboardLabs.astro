@@ -1,0 +1,71 @@
+---
+import CircleProgress from "../../svgs/CircleProgress.astro";
+const levels = [
+  { id: "1", name: "Level 1", progress: "50" },
+  { id: "2", name: "Level 2", progress: "20" },
+  { id: "3", name: "Level 3", progress: "30" },
+  { id: "4", name: "Level 4", progress: "70" },
+  { id: "5", name: "Level 5", progress: "50" },
+];
+
+const labs = [
+  { level_id: "1", name: "HTML Level 1", url: "/" },
+  { level_id: "2", name: "HTML Level 2", url: "/" },
+  { level_id: "3", name: "HTML Level 3", url: "/" },
+  { level_id: "4", name: "HTML Level 4", url: "/" },
+  { level_id: "4", name: "HTML injection 4", url: "/" },
+  { level_id: "5", name: "HTML 5", url: "/" },
+];
+---
+
+<div class="labs">
+  <h3>Labs</h3>
+  <ul>
+    {
+      levels.map((level) => (
+        <li class="level">
+          <div class="level-content">
+            <p>{level.name}</p>
+            <div class="progress">
+              <p>{level.progress}%</p>
+              <progress class="progress" value={level.progress} max="100" />
+            </div>
+          </div>
+          <ul>
+            {labs.map((lab) =>
+              lab.level_id == level.id ? (
+                <li>
+                  <a href={lab.url}>{lab.name}</a>
+                </li>
+              ) : (
+                ""
+              )
+            )}
+          </ul>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .labs .level {
+    border: 1px solid;
+    padding: 16px;
+  }
+
+  .level .level-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .level-content p {
+    margin: 0px;
+  }
+
+  .labs ul {
+    list-style: none;
+  }
+</style>

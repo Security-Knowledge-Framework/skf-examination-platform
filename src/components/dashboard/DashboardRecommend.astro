@@ -1,0 +1,38 @@
+---
+const labsRecommended = [
+  { level: "Level 1", name: "HTML Level 1", url: "/" },
+  { level: "Level 2", name: "HTML Level 2", url: "/" },
+];
+---
+
+<div class="recommended">
+  <h3>Recommended For You</h3>
+  <div class="list-rec">
+    {
+      labsRecommended.map((lab) => (
+        <div class="item-rec">
+          <p>{lab.name}</p>
+          <p>{lab.level}</p>
+
+          <a href={lab.url}>Start</a>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .list-rec {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    gap: 24px;
+  }
+
+  .list-rec .item-rec {
+    width: 25%;
+    padding: 16px;
+    border: 1px solid;
+  }
+</style>

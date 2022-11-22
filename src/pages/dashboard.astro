@@ -1,7 +1,13 @@
 ---
 import Baselayout from "../layouts/Baselayout.astro";
+import DashboardHeader from "../components/dashboard/DashboardHeader.astro";
+import DashboardLabs from "../components/dashboard/DashboardLabs.astro";
+import DashboardRecommend from "../components/dashboard/DashboardRecommend.astro";
 ---
 
 <Baselayout title="SKF | Dashboard">
   <h1>Dashboard</h1>
+  <DashboardHeader />
+  <DashboardLabs />
+  <DashboardRecommend />
 </Baselayout>
