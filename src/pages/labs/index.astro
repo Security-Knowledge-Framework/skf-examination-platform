@@ -1,7 +1,25 @@
 ---
+import { getAllLabs } from "../../db/labs/getAllLabs";
 import Baselayout from "../../layouts/Baselayout.astro";
+
+const labs = await getAllLabs();
 ---
 
 <Baselayout title="SKF | ALL LABS">
   <h1>ALL LABS</h1>
+  <ul>
+    {
+      labs.map((lab) => (
+        <li>
+          <a href={`/labs/${lab.id}`}>{lab.name}</a>
+        </li>
+      ))
+    }
+  </ul>
 </Baselayout>
+
+<style>
+  li {
+    margin-bottom: 1rem;
+  }
+</style>

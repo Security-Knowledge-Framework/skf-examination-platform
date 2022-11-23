@@ -1,0 +1,986 @@
+[
+  {
+    "id": 1,
+    "name": "Path traversal (LFI)",
+    "description": "Local File Inclusion (also known as LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application.",
+    "level": 1
+  },
+  {
+    "id": 2,
+    "name": "Cross Site Scripting",
+    "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites.",
+    "level": 1
+  },
+  {
+    "id": 3,
+    "name": "Cross site scripting (attribute)",
+    "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites.",
+    "level": 1
+  },
+  {
+    "id": 4,
+    "name": "Cross site scripting (href)",
+    "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites.",
+    "level": 1
+  },
+  {
+    "id": 5,
+    "name": "Insecure file upload",
+    "description": "Insecure File Upload vulnerabilities occur when web applications allow users to upload files to the server. These files can then be used to compromise the application",
+    "level": 1
+  },
+  {
+    "id": 6,
+    "name": "Clickjacking",
+    "description": "Clickjacking is a type of malicious trick that uses multiple transparent or opaque layers to deceive users into clicking on a button or link on another page when they were intending to click on the top level page. This technique is often used for tricking users into clicking on ads",
+    "level": 1
+  },
+  {
+    "id": 7,
+    "name": "Rate-limiting",
+    "description": "Rate-limiting is a technique used to limit the number of requests a client can make to a server in a given time period. This is done to prevent a client from overwhelming the server with requests",
+    "level": 1
+  },
+  {
+    "id": 8,
+    "name": "Open redirect",
+    "description": "Open Redirect vulnerabilities occur when an application redirects a user to a URL that is controllable by an attacker. This can be used to redirect users to a malicious website",
+    "level": 1
+  },
+  {
+    "id": 9,
+    "name": "Formulla injection",
+    "description": "Formula Injection vulnerabilities occur when user input is embedded in a formula that is evaluated by the application. This can be used to manipulate the formula and execute arbitrary code.",
+    "level": 1
+  },
+  {
+    "id": 10,
+    "name": "Mass assingment attack",
+    "description": "Mass Assignment vulnerabilities occur when an application allows users to modify attributes of an object that they do not have permission to modify. This can be used to modify attributes of an object that the user does not have permission to modify",
+    "level": 1
+  },
+  {
+    "id": 11,
+    "name": "Remote file inclusion",
+    "description": "Remote File Inclusion (also known as RFI) is the process of including files",
+    "level": 1
+  },
+  {
+    "id": 12,
+    "name": "Local file inclusion ( harder )",
+    "description": "Local File Inclusion (also known as LFI) is the process of including files",
+    "level": 1
+  },
+  {
+    "id": 13,
+    "name": "Local file inclusion ( hard )",
+    "description": "Local File Inclusion (also known as LFI) is the process of including files",
+    "level": 1
+  },
+  {
+    "id": 14,
+    "name": "Content security policiy",
+    "description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks",
+    "level": 1
+  },
+  {
+    "id": 15,
+    "name": "Regex Ddos",
+    "description": "Regular Expression Denial of Service (ReDoS) is a Denial of Service attack in which the attacker provides a specially crafted input to a regular expression parser",
+    "level": 1
+  },
+  {
+    "id": 16,
+    "name": "Command injection",
+    "description": "Command Injection vulnerabilities occur when user input is embedded in a command that is executed by the application. This can be used to execute arbitrary commands on the server",
+    "level": 1
+  },
+  {
+    "id": 17,
+    "name": "Command injection ( easy )",
+    "description": "Command Injection vulnerabilities occur when user input is embedded in a command that is executed by the application. This can be used to execute arbitrary commands on the server",
+    "level": 1
+  },
+  {
+    "id": 18,
+    "name": "Information disclosure 1",
+    "description": "Information Disclosure vulnerabilities occur when an application discloses sensitive information to an attacker. This can be used to gather information about the application",
+    "level": 1
+  },
+  {
+    "id": 19,
+    "name": "Information disclosure 2",
+    "description": "Information Disclosure vulnerabilities occur when an application discloses sensitive information to an attacker. This can be used to gather information about the application",
+    "level": 1
+  },
+  {
+    "id": 20,
+    "name": "Authentication bypass ( easy )",
+    "description": "Authentication Bypass vulnerabilities occur when an application does not properly verify the identity of a user. This can be used to gain access to functionality that the user does not have permission to access",
+    "level": 1
+  },
+  {
+    "id": 21,
+    "name": "Authentication bypass",
+    "description": "Authentication Bypass vulnerabilities occur when an application does not properly verify the identity of a user. This can be used to gain access to functionality that the user does not have permission to access",
+    "level": 1
+  },
+  {
+    "id": 22,
+    "name": "Right to left override attack",
+    "description": "Right-to-Left Override (RLO) is a Unicode attack that can be used to bypass input validation filters that do not properly handle Unicode characters. This can be used to bypass filters that are intended to prevent XSS",
+    "level": 1
+  },
+  {
+    "id": 23,
+    "name": "Client side restriction bypass",
+    "description": "Client-Side Restriction Bypass vulnerabilities occur when an application does not properly enforce security restrictions on the client. This can be used to bypass security restrictions that are intended to prevent a user from accessing functionality that they do not have permission to access.",
+    "level": 1
+  },
+  {
+    "id": 24,
+    "name": "Confidential Document",
+    "description": "Confidential Document is a document that contains sensitive information about the application. This can be used to gather information about the application",
+    "level": 1
+  },
+  {
+    "id": 25,
+    "name": "DOM XSS",
+    "description": "DOM-based Cross-Site Scripting (DOM XSS) attacks are a type of injection",
+    "level": 1
+  },
+  {
+    "id": 26,
+    "name": "Error Handling",
+    "description": "Error Handling vulnerabilities occur when an application does not properly handle errors. This can be used to gather information about the application",
+    "level": 1
+  },
+  {
+    "id": 27,
+    "name": "Outdated Whitelist",
+    "description": "Outdated Whitelist vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 1
+  },
+  {
+    "id": 28,
+    "name": "Privacy Policy",
+    "description": "Privacy Policy is a document that contains information about how the application handles the personal information of its users. This can be used to gather information about the application",
+    "level": 1
+  },
+  {
+    "id": 29,
+    "name": "Repetitive Registration",
+    "description": "Repetitive Registration vulnerabilities occur when an application does not properly enforce rate-limiting on user registration. This can be used to register multiple accounts",
+    "level": 1
+  },
+  {
+    "id": 30,
+    "name": "Score Board",
+    "description": "Score Board is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 1
+  },
+  {
+    "id": 31,
+    "name": "Zero Stars",
+    "description": "Zero Stars is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 1
+  },
+  {
+    "id": 32,
+    "name": "Missing Encoding",
+    "description": "Missing Encoding vulnerabilities occur when an application does not properly encode user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 1
+  },
+  {
+    "id": 33,
+    "name": "Exposed Metrics",
+    "description": "Exposed Metrics vulnerabilities occur when an application exposes sensitive information about the application. This can be used to gather information about the application",
+    "level": 1
+  },
+  {
+    "id": 67,
+    "name": "SQLI-blind",
+    "description": "SQL Injection (SQLi) is a type of injection",
+    "level": 3
+  },
+  {
+    "id": 34,
+    "name": "Bonus Payload",
+    "description": "Bonus Payload is a document that contains sensitive information about the application. This can be used to gather information about the application",
+    "level": 1
+  },
+  {
+    "id": 35,
+    "name": "XSSI",
+    "description": "Cross-Site Script Inclusion (XSSI) is a type of injection",
+    "level": 2
+  },
+  {
+    "id": 36,
+    "name": "Cross site request forgery weak",
+    "description": "Cross-Site Request Forgery (CSRF) is a type of attack that occurs when a malicious website causes a user's browser to perform an unwanted action on a trusted website as a result of the user being authenticated to that website. CSRF attacks specifically target state-changing requests",
+    "level": 2
+  },
+  {
+    "id": 37,
+    "name": "External entity attack",
+    "description": "External Entity Attack vulnerabilities occur when an application does not properly validate XML input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 2
+  },
+  {
+    "id": 38,
+    "name": "SQLI (union select)",
+    "description": "SQL Injection (SQLi) is a type of injection",
+    "level": 2
+  },
+  {
+    "id": 39,
+    "name": "Open redirect ( harder )",
+    "description": "Open Redirect vulnerabilities occur when an application redirects a user to a URL that is controlled by the attacker. This can be used to redirect users to a malicious website",
+    "level": 2
+  },
+  {
+    "id": 40,
+    "name": "SQLI -like",
+    "description": "SQL Injection (SQLi) is a type of injection",
+    "level": 2
+  },
+  {
+    "id": 41,
+    "name": "Insecure direct object reference",
+    "description": "Insecure Direct Object Reference vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 2
+  },
+  {
+    "id": 42,
+    "name": "JWT null",
+    "description": "JSON Web Token (JWT) is a compact",
+    "level": 2
+  },
+  {
+    "id": 43,
+    "name": "JWT weak secret",
+    "description": "JSON Web Token (JWT) is a compact",
+    "level": 2
+  },
+  {
+    "id": 44,
+    "name": "Command injection ( harder )",
+    "description": "Command Injection vulnerabilities occur when user input is embedded in a command that is executed by the application. This can be used to execute arbitrary commands on the server",
+    "level": 2
+  },
+  {
+    "id": 45,
+    "name": "Authentication bypass ( harder )",
+    "description": "Authentication Bypass vulnerabilities occur when an application does not properly verify the identity of a user. This can be used to gain access to functionality that the user does not have permission to access",
+    "level": 2
+  },
+  {
+    "id": 46,
+    "name": "Client side template injection",
+    "description": "Client-Side Template Injection vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 2
+  },
+  {
+    "id": 47,
+    "name": "CSS Injection",
+    "description": "CSS Injection vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 2
+  },
+  {
+    "id": 48,
+    "name": "Client side restriction bypass ( harder )",
+    "description": "Client-Side Restriction Bypass vulnerabilities occur when an application does not properly enforce security restrictions on the client. This can be used to bypass security restrictions that are intended to prevent a user from accessing functionality that they do not have permission to access.",
+    "level": 2
+  },
+  {
+    "id": 49,
+    "name": "Credentials guessing ( easy )",
+    "description": "Credentials Guessing vulnerabilities occur when an application does not properly enforce rate-limiting on user authentication. This can be used to guess the credentials of a user",
+    "level": 2
+  },
+  {
+    "id": 50,
+    "name": "Credentials guessing ( harder )",
+    "description": "Credentials Guessing vulnerabilities occur when an application does not properly enforce rate-limiting on user authentication. This can be used to guess the credentials of a user",
+    "level": 2
+  },
+  {
+    "id": 51,
+    "name": "Credentials guessing ( hard )",
+    "description": "Credentials Guessing vulnerabilities occur when an application does not properly enforce rate-limiting on user authentication. This can be used to guess the credentials of a user",
+    "level": 2
+  },
+  {
+    "id": 52,
+    "name": "Admin Section",
+    "description": "Admin Section is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 2
+  },
+  {
+    "id": 53,
+    "name": "Deprecated Interface",
+    "description": "Deprecated Interface is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 2
+  },
+  {
+    "id": 54,
+    "name": "Five-Star Feedback",
+    "description": "Five-Star Feedback is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 2
+  },
+  {
+    "id": 55,
+    "name": "Login Admin",
+    "description": "Login Admin is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 2
+  },
+  {
+    "id": 56,
+    "name": "Login MC SafeSearch",
+    "description": "Login MC SafeSearch is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 2
+  },
+  {
+    "id": 57,
+    "name": "Password Strength",
+    "description": "Password Strength is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 2
+  },
+  {
+    "id": 58,
+    "name": "Reflected XSS",
+    "description": "Reflected Cross-Site Scripting (XSS) vulnerabilities occur when an application includes untrusted data in a new web page that is sent to a user. This can be used to execute arbitrary scripts in a user's browser",
+    "level": 2
+  },
+  {
+    "id": 59,
+    "name": "Security Policy",
+    "description": "Security Policy is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 2
+  },
+  {
+    "id": 60,
+    "name": "View Basket",
+    "description": "View Basket is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 2
+  },
+  {
+    "id": 61,
+    "name": "Weird Crypto",
+    "description": "Weird Crypto is a document that contains information about the current state of the application. This can be used to gather information about the application",
+    "level": 2
+  },
+  {
+    "id": 62,
+    "name": "Cross site request forgery",
+    "description": "Cross-Site Request Forgery (CSRF) is a type of attack that occurs when a malicious website causes a user's browser to perform an unwanted action on a trusted website as a result of the user being authenticated to that website. CSRF attacks specifically target state-changing requests",
+    "level": 3
+  },
+  {
+    "id": 63,
+    "name": "Cross site request forgery (same site)",
+    "description": "Cross-Site Request Forgery (CSRF) is a type of attack that occurs when a malicious website causes a user's browser to perform an unwanted action on a trusted website as a result of the user being authenticated to that website. CSRF attacks specifically target state-changing requests",
+    "level": 3
+  },
+  {
+    "id": 64,
+    "name": "HttpOnly (session hijacking)",
+    "description": "HttpOnly is a flag that can be set on cookies to prevent them from being accessed by JavaScript. This can be used to prevent session hijacking attacks",
+    "level": 3
+  },
+  {
+    "id": 65,
+    "name": "Open redirect ( hard )",
+    "description": "Open Redirect vulnerabilities occur when an application redirects a user to a URL that is controlled by the attacker. This can be used to redirect users to a malicious website",
+    "level": 3
+  },
+  {
+    "id": 66,
+    "name": "CORS exploitation",
+    "description": "Cross-Origin Resource Sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served. CORS is implemented using HTTP headers that allow servers to describe the set of origins that are permitted to read that information using a web browser.",
+    "level": 3
+  },
+  {
+    "id": 68,
+    "name": "Server side request forgery",
+    "description": "Server-Side Request Forgery (SSRF) is a type of attack that occurs when an attacker can cause a server to make a request to an arbitrary URL. This can be used to cause the server to make requests to internal services that are not intended to be accessible from the internet",
+    "level": 3
+  },
+  {
+    "id": 69,
+    "name": "Server side template injection",
+    "description": "Server-Side Template Injection vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 70,
+    "name": "Insecure deserialization (yaml)",
+    "description": "Insecure Deserialization vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 71,
+    "name": "Insecure deserialization pickle ( hard )",
+    "description": "Insecure Deserialization vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 72,
+    "name": "Insecure deserialization pickle ( harder )",
+    "description": "Insecure Deserialization vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 73,
+    "name": "Race condition",
+    "description": "lorem ipsum",
+    "level": 3
+  },
+  {
+    "id": 74,
+    "name": "Command injection ( hard )",
+    "description": "Command Injection vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 75,
+    "name": "Command injection ( blind )",
+    "description": "Command Injection vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 76,
+    "name": "Authentication bypass ( hard )",
+    "description": "Authentication Bypass vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 77,
+    "name": "Session puzzeling",
+    "description": "Session Puzzling vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 78,
+    "name": "Graphql DOS",
+    "description": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API",
+    "level": 3
+  },
+  {
+    "id": 79,
+    "name": "GraphQL IDOR",
+    "description": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API",
+    "level": 3
+  },
+  {
+    "id": 80,
+    "name": "GraphQL Injections",
+    "description": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API",
+    "level": 3
+  },
+  {
+    "id": 81,
+    "name": "GraphQL Introspection",
+    "description": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API",
+    "level": 3
+  },
+  {
+    "id": 82,
+    "name": "GraphQL Mutations",
+    "description": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API",
+    "level": 3
+  },
+  {
+    "id": 83,
+    "name": "Prototype pollution",
+    "description": "Prototype Pollution vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 84,
+    "name": "API-only XSS",
+    "description": "API-only XSS vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 85,
+    "name": "Admin Registration",
+    "description": "Admin Registration vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 86,
+    "name": "Bjoerns Favorite Pet",
+    "description": "Bjoerns Favorite Pet vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 87,
+    "name": "CAPTCHA Bypass",
+    "description": "CAPTCHA Bypass vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 88,
+    "name": "Client-side XSS Protection",
+    "description": "Client-side XSS Protection vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 89,
+    "name": "Database Schema",
+    "description": "Database Schema vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 90,
+    "name": "Forged Feedback",
+    "description": "Forged Feedback vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 91,
+    "name": "Forged Review",
+    "description": "Forged Review vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 92,
+    "name": "GDPR Data Erasure",
+    "description": "GDPR Data Erasure vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 93,
+    "name": "Login Amy",
+    "description": "Login Amy vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 94,
+    "name": "Login Bender",
+    "description": "Login Bender vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 95,
+    "name": "Login Jim",
+    "description": "Login Jim vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 96,
+    "name": "Manipulate Basket",
+    "description": "Manipulate Basket vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 97,
+    "name": "Payback Time",
+    "description": "Payback Time vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 98,
+    "name": "Privacy Policy Inspection",
+    "description": "Privacy Policy Inspection vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 99,
+    "name": "Product Tampering",
+    "description": "Product Tampering vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 100,
+    "name": "Reset Jims Password",
+    "description": "Reset Jims Password vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 101,
+    "name": "Upload Size",
+    "description": "Upload Size vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 102,
+    "name": "Upload Type",
+    "description": "Upload Type vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 103,
+    "name": "XXE Data Access",
+    "description": "XXE Data Access vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 104,
+    "name": "Deluxe Fraud",
+    "description": "Deluxe Fraud vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 105,
+    "name": "CSRF",
+    "description": "CSRF vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 106,
+    "name": "Juice Shop CTF",
+    "description": "Juice Shop CTF vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 107,
+    "name": "SKF Hack OS Python",
+    "description": "SKF Hack OS Python vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 108,
+    "name": "SKF Hack OS Java",
+    "description": "SKF Hack OS Java vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 109,
+    "name": "Host header auth bypass",
+    "description": "Host header auth bypass vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 110,
+    "name": "HTTP response splitting",
+    "description": "HTTP response splitting vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 111,
+    "name": "Websocket message manipulation",
+    "description": "Websocket message manipulation vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 112,
+    "name": "SQLi login bypass",
+    "description": "SQLi login bypass vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 113,
+    "name": "Web cache poisoning",
+    "description": "Web cache poisoning vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 3
+  },
+  {
+    "id": 114,
+    "name": "Access Log",
+    "description": "Access Log vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 115,
+    "name": "Christmas Special",
+    "description": "Christmas Special vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 116,
+    "name": "CSP Bypass",
+    "description": "CSP Bypass vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 117,
+    "name": "Easter Egg",
+    "description": "Easter Egg vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 118,
+    "name": "Ephemeral Accountant",
+    "description": "Ephemeral Accountant vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 119,
+    "name": "Expired Coupon",
+    "description": "Expired Coupon vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 120,
+    "name": "Forgotten Developer Backup",
+    "description": "Forgotten Developer Backup vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 121,
+    "name": "Forgotten Sales Backup",
+    "description": "Forgotten Sales Backup vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 122,
+    "name": "GDPR Data Theft",
+    "description": "GDPR Data Theft vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 123,
+    "name": "HTTP-Header XSS",
+    "description": "HTTP-Header XSS vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 124,
+    "name": "Leaked Unsafe Product",
+    "description": "Leaked Unsafe Product vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 125,
+    "name": "Legacy Typosquatting",
+    "description": "Legacy Typosquatting vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 126,
+    "name": "Login Bjoern",
+    "description": "Login Bjoern vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 127,
+    "name": "Misplaced Signature File",
+    "description": "Misplaced Signature File vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 128,
+    "name": "Nested Easter Egg",
+    "description": "Nested Easter Egg vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 129,
+    "name": "NoSQL DoS",
+    "description": "NoSQL DoS vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 130,
+    "name": "NoSQL Manipulation",
+    "description": "NoSQL Manipulation vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 131,
+    "name": "Reset Benders Password",
+    "description": "Reset Benders Password vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 132,
+    "name": "Server-side XSS Protection",
+    "description": "Server-side XSS Protection vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 133,
+    "name": "Steganography",
+    "description": "Steganography vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 134,
+    "name": "User Credentials",
+    "description": "User Credentials vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 135,
+    "name": "Vulnerable Library",
+    "description": "Vulnerable Library vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 136,
+    "name": "Whitelist Bypass",
+    "description": "Whitelist Bypass vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 4
+  },
+  {
+    "id": 137,
+    "name": "Blockchain Hype",
+    "description": "Blockchain Hype vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 138,
+    "name": "Blocked RCE DoS",
+    "description": "Blocked RCE DoS vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 139,
+    "name": "Change Benders Password",
+    "description": "Change Benders Password vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 140,
+    "name": "Email Leak",
+    "description": "Email Leak vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 141,
+    "name": "Extra Language",
+    "description": "Extra Language vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 142,
+    "name": "Frontend Typosquatting",
+    "description": "Frontend Typosquatting vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 143,
+    "name": "Leaked Access Logs",
+    "description": "Leaked Access Logs vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 144,
+    "name": "Login CISO",
+    "description": "Login CISO vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 145,
+    "name": "NoSQL Exfiltration",
+    "description": "NoSQL Exfiltration vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 146,
+    "name": "Reset Bjoerns Password",
+    "description": "Reset Bjoerns Password vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 147,
+    "name": "Reset Mortys Password",
+    "description": "Reset Mortys Password vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 148,
+    "name": "Retrieve Blueprint",
+    "description": "Retrieve Blueprint vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 149,
+    "name": "Supply Chain Attack",
+    "description": "Supply Chain Attack vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 150,
+    "name": "Two Factor Authentication",
+    "description": "Two Factor Authentication vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 151,
+    "name": "Unsigned JWT",
+    "description": "Unsigned JWT vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 152,
+    "name": "XXE DoS",
+    "description": "XXE DoS vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 153,
+    "name": "Cross-Site Imaging",
+    "description": "Cross-Site Imaging vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 154,
+    "name": "Arbitrary File Write",
+    "description": "Arbitrary File Write vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 5
+  },
+  {
+    "id": 155,
+    "name": "Forged Coupon",
+    "description": "Forged Coupon vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  },
+  {
+    "id": 156,
+    "name": "Forged Signed JWT",
+    "description": "Forged Signed JWT vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  },
+  {
+    "id": 157,
+    "name": "Imaginary Challenge",
+    "description": "Imaginary Challenge vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  },
+  {
+    "id": 158,
+    "name": "Login Support Team",
+    "description": "Login Support Team vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  },
+  {
+    "id": 159,
+    "name": "Multiple Likes",
+    "description": "Multiple Likes vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  },
+  {
+    "id": 160,
+    "name": "Premium Paywall",
+    "description": "Premium Paywall vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  },
+  {
+    "id": 161,
+    "name": "SSRF",
+    "description": "SSRF vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  },
+  {
+    "id": 162,
+    "name": "SSTi",
+    "description": "SSTi vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  },
+  {
+    "id": 163,
+    "name": "Successful RCE DoS",
+    "description": "Successful RCE DoS vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  },
+  {
+    "id": 164,
+    "name": "Video XSS",
+    "description": "Video XSS vulnerabilities occur when an application does not properly validate user input. This can be used to bypass input validation filters that are intended to prevent XSS",
+    "level": 6
+  }
+]

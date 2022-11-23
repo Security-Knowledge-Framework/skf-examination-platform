@@ -3,6 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,16 +13,20 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
-    "check:format": "prettier --check ."
+    "check:format": "prettier --check .",
+    "generate:json": "tsx ./src/scripts/fetchLabs.ts"
   },
   "dependencies": {
     "@astrojs/solid-js": "^1.2.3",
-    "@supabase/supabase-js": "^2.1.0",
+    "@supabase/supabase-js": "^2.1.1",
     "astro": "^1.6.10",
     "solid-js": "^1.6.2"
   },
   "devDependencies": {
-    "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.7.0"
+    "@types/node": "^18.11.9",
+    "dotenv": "^16.0.3",
+    "prettier": "^2.8.0",
+    "prettier-plugin-astro": "^0.7.0",
+    "tsx": "^3.12.1"
   }
 }

@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
+import { getApiKey } from "../utils/consts";
 
 const supabaseUrl = "https://ccsgfooankckfqpmcfyb.supabase.co";
-const supabaseKey = import.meta.env.PUBLIC_SUPABASE_API_KEY || "";
+const supabaseKey = (await getApiKey()) || "";
 
 export const supabase = createClient(supabaseUrl, supabaseKey);

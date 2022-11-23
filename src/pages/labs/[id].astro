@@ -1,0 +1,25 @@
+---
+import { getAllLabs } from "../../db/labs/getAllLabs";
+import Baselayout from "../../layouts/Baselayout.astro";
+
+export async function getStaticPaths() {
+  const labs = await getAllLabs();
+  return labs.map((lab) => ({
+    params: {
+      id: lab.id,
+    },
+    props: {
+      ...lab,
+    },
+  }));
+}
+
+// const { id } = Astro.params;
+const { name, description, level } = Astro.props;
+---
+
+<Baselayout title="SKF | LAB - 1">
+  <h1>{name}</h1>
+  <p>{description}</p>
+  <p>Level: {level}</p>
+</Baselayout>
