@@ -1,14 +1,59 @@
-<nav>
-  <a href="/">Home</a>
-  <a href="/profile">profile</a>
-  <a href="/dashboard">dashboard</a>
-  <a href="/login">login</a>
-  <a href="/register">register</a>
-  <a href="/labs">labs</a>
+---
+import Logo from "../svgs/Logo.astro";
+---
+
+<nav class="wrapper">
+  <div class="logo">
+    <Logo />
+    <p>SKF</p>
+  </div>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/labs">Labs</a></li>
+  </ul>
 </nav>
 
 <style>
   nav {
     margin-bottom: 1rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: var(--primary-500);
+
+    width: 100%;
+  }
+
+  nav .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    color: var(--primary-500);
+    font-weight: 600;
+  }
+
+  nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    gap: .5rem;
+  }
+
+  nav ul a{
+    padding: 1em 1.2em;
+  }
+
+  nav ul a:hover{
+    border-radius: 1.5em;
+    color: white;
+    background-color: var(--primary-500);
   }
 </style>

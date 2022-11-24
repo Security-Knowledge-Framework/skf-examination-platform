@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-ExtraBold.ttf");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Bold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -40,4 +61,57 @@ img {
   .wrapper {
     padding: 0 15px;
   }
+}
+
+:root {
+  --white: rgb(255, 255, 255);
+
+  --primary-50: #f5eef8;
+  --primary-200: #bebfd7;
+  --primary-500: #484c84;
+  --primary-700: #2B2E4F;
+
+  --secondary-50: #faf3f4;
+  --secondary-200: #f5c6c7;
+  --secondary-500: #e15154;
+
+  --background-gradient: linear-gradient(
+    111.43deg,
+    #bebfd7 5.75%,
+    #ebe6ed 31.48%,
+    #faf3f4 53.47%,
+    #f5c6c7 93.85%
+  );
+  --gradient: linear-gradient(
+    111.43deg,
+    var(--primary-500) 5.75%,
+    var(--secondary-500) 31.48%
+  );
+
+  --font-heading: "Open Sans", serif;
+  --font-body: "Open Sans", sans-serif;
+  --section-padding: 3em;
+}
+
+body {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--text-primary);
+}
+
+button,
+.btn {
+  outline: none;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 2em;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
