@@ -6,20 +6,58 @@ const labs = await getAllLabs();
 ---
 
 <Baselayout title="SKF | ALL LABS">
-  <h1>ALL LABS</h1>
-  <ul>
-    {
-      labs.map((lab) => (
-        <li>
-          <a href={`/labs/${lab.id}`}>{lab.name}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <div class="wrapper">
+    <h1>ALL LABS</h1>
+    <table>
+      <tr><th>N°</th><th>Lab Name</th><th>Level</th><th>Description</th></tr>
+      {
+        labs.map((lab) => (
+          <tr>
+            <td>{lab.id}</td>
+            <td>
+              <a href={`/labs/${lab.id}`}>{lab.name}</a>
+            </td>
+            <td>{lab.level}</td>
+            <td>{lab.description.slice(0, 64) + "..."}</td>
+          </tr>
+        ))
+      }
+    </table>
+  </div>
 </Baselayout>
 
 <style>
-  li {
-    margin-bottom: 1rem;
+  :global(body) {
+    background: var(--background-gradient);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .wrapper table {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  table tr th {
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--primary-500);
+  }
+
+  table tr td {
+    padding: 0.5rem;
+  }
+
+  table tr:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  h1 {
+    font-weight: 700;
+    color: #515594;
+    text-align: center;
+    margin-bottom: 2rem;
   }
 </style>
