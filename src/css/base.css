@@ -69,7 +69,7 @@ img {
   --primary-50: #f5eef8;
   --primary-200: #bebfd7;
   --primary-500: #484c84;
-  --primary-700: #2B2E4F;
+  --primary-700: #2b2e4f;
 
   --secondary-50: #faf3f4;
   --secondary-200: #f5c6c7;
@@ -108,7 +108,7 @@ button,
   border: none;
   padding: 1em 2em;
   border-radius: 2em;
-
+  cursor: pointer;
   font-weight: 700;
   font-size: 12px;
   line-height: 19px;

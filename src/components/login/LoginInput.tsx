@@ -36,30 +36,28 @@ export function LoginInpout() {
     <div class="login-form">
       <h3>Sign in to your account</h3>
       <form onSubmit={handleSubmit} action="" method="post">
-      <div class="item-input">
-        <label for="email">Username or email:</label>
-        <input
-          type="text"
-          name="email"
-          id="email"
-          value={form.email}
-          onChange={updateFormField("email")}
-        />
-      </div>
+        <div class="item-input">
+          <label for="email">Username or email:</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            value={form.email}
+            onChange={updateFormField("email")}
+          />
+        </div>
 
-      <div class="item-input">
-        <label for="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          value={form.password}
-          onChange={updateFormField("password")}
-        />
-      </div>
-        
+        <div class="item-input">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={form.password}
+            onChange={updateFormField("password")}
+          />
+        </div>
 
-        
         <Show when={error()}>
           <div class="error">{error}</div>
         </Show>
