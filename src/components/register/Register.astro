@@ -1,22 +1,36 @@
 ---
-import { RegisterInput } from "./RegisterInput";
+import RegisterInput from "./RegisterInput.svelte";
+
+const benefits = [
+  {
+    title: "Lorem ipsum dolor sit",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Lobortis cursus orci.",
+  },
+  {
+    title: "Lorem ipsum dolor sit",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Lobortis cursus orci.",
+  },
+  {
+    title: "Lorem ipsum dolor sit",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Lobortis cursus orci.",
+  },
+];
 ---
 
 <div class="info">
   <h3>Security Knowledge Framework</h3>
   <ul>
-    <li>
-      <p class="title">Lorem ipsum dolor sit</p>
-      <p>Lorem ipsum dolor sit amet consectetur. Lobortis cursus orci.</p>
-    </li>
-    <li>
-      <p class="title">Lorem ipsum dolor sit</p>
-      <p>Lorem ipsum dolor sit amet consectetur. Lobortis cursus orci.</p>
-    </li>
-    <li>
-      <p class="title">Lorem ipsum dolor sit</p>
-      <p>Lorem ipsum dolor sit amet consectetur. Lobortis cursus orci.</p>
-    </li>
+    {
+      benefits.map((benefit) => (
+        <li>
+          <h4>{benefit.title}</h4>
+          <p>{benefit.description}</p>
+        </li>
+      ))
+    }
   </ul>
 
   <div class="footer">
@@ -65,11 +79,14 @@ import { RegisterInput } from "./RegisterInput";
     font-size: 16px;
   }
 
+  li h4 {
+    text-align: left;
+  }
+
   .info .sign-in {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
-
     align-self: center;
   }
 
@@ -89,7 +106,6 @@ import { RegisterInput } from "./RegisterInput";
     justify-content: center;
     gap: 1.5rem;
     padding: 8px;
-
     width: 100%;
   }
 </style>
