@@ -1,4 +1,10 @@
 @font-face {
+  font-family: "Electrolize";
+  src: url("/fonts/Electrolize-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Open Sans";
   src: url("/fonts/OpenSans-ExtraBold.ttf");
   font-weight: 800;
@@ -70,6 +76,8 @@ img {
   --primary-200: #bebfd7;
   --primary-500: #484c84;
   --primary-700: #2b2e4f;
+  --primary-800: #2b2e4f;
+  --primary-900: #1d1e35;
 
   --secondary-50: #faf3f4;
   --secondary-200: #f5c6c7;
@@ -90,6 +98,7 @@ img {
 
   --font-heading: "Open Sans", serif;
   --font-body: "Open Sans", sans-serif;
+  --font-decoration: "Electrolize", sans-serif;
   --section-padding: 3em;
 }
 
@@ -100,6 +109,8 @@ body {
   font-size: 16px;
   line-height: 140%;
   color: var(--text-primary);
+
+  background-color: var(--primary-900);
 }
 
 button,
@@ -114,4 +125,42 @@ button,
   line-height: 19px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+a,
+input,
+textarea,
+p,
+span,
+select,
+li {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.small-text {
+  font-size: 0.75rem;
 }

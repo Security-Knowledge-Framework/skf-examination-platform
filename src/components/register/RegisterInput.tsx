@@ -43,7 +43,7 @@ export const RegisterInput: Component = () => {
 
   return (
     <div class="register-form">
-      <h1>Register</h1>
+      <p>Create an account.</p>
       <form class="form" onSubmit={handleSubmit}>
         <div class="item-input">
           <label for="email">Email:</label>

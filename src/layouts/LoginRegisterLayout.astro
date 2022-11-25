@@ -1,0 +1,37 @@
+---
+import { LoadUser } from "../components/LoadUser";
+import Nav from "../components/Nav.astro";
+import "../css/base.css";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <LoadUser client:load />
+    <div class="wrapper">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style>
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+  }
+</style>

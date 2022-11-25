@@ -1,8 +1,95 @@
 ---
 import { RegisterInput } from "./RegisterInput";
-import LoginRegisterStyle from "../../layouts/LoginRegisterStyle.astro";
 ---
 
-<LoginRegisterStyle>
-  <RegisterInput client:load />
-</LoginRegisterStyle>
+<div class="info">
+  <h3>Security Knowledge Framework</h3>
+  <ul>
+    <li>
+      <p class="title">Lorem ipsum dolor sit</p>
+      <p>Lorem ipsum dolor sit amet consectetur. Lobortis cursus orci.</p>
+    </li>
+    <li>
+      <p class="title">Lorem ipsum dolor sit</p>
+      <p>Lorem ipsum dolor sit amet consectetur. Lobortis cursus orci.</p>
+    </li>
+    <li>
+      <p class="title">Lorem ipsum dolor sit</p>
+      <p>Lorem ipsum dolor sit amet consectetur. Lobortis cursus orci.</p>
+    </li>
+  </ul>
+
+  <div class="footer">
+    <div class="sign-in">
+      <p>Have an account?</p>
+      <a href="/login">Sign in</a>
+    </div>
+
+    <div class="info">
+      <a href="">Contact</a>
+      <a href="">Terms of Service</a>
+      <a href="">Privacy Policy</a>
+    </div>
+    <p class="small-text">© 2022 Security Knowlegde Framework</p>
+  </div>
+</div>
+<RegisterInput client:load />
+
+<style>
+  body {
+    background: linear-gradient(
+      to right,
+      var(--primary-800) 0%,
+      var(--primary-800) 50%,
+      var(--primary-900) 0%,
+      var(--primary-900) 50%
+    );
+  }
+
+  .info {
+    width: 50%;
+    color: white;
+    padding: 24px;
+  }
+
+  .info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 320px;
+    margin: 48px 0px;
+  }
+
+  ul li .title {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .info .sign-in {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    align-self: center;
+  }
+
+  .info .sign-in a {
+    font-weight: 600;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 8px;
+
+    width: 100%;
+  }
+</style>
