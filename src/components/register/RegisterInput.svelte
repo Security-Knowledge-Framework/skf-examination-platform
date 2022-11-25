@@ -1,4 +1,8 @@
 <script lang="ts">
+  import {
+    loginWithGithub,
+    loginWithGoogle,
+  } from "../../db/users/loginWithProvider";
   import { registerUser } from "../../db/users/registerUser";
 
   let emailInput = "";
@@ -78,8 +82,8 @@
       <div />
     </div>
     <div class="list-social">
-      <button class="sign-with"> Github </button>
-      <button class="sign-with"> Google </button>
+      <button class="sign-with" on:click={loginWithGithub}> Github </button>
+      <button class="sign-with" on:click={loginWithGoogle}> Google </button>
     </div>
     <svg height="10" width="100%">
       <line
