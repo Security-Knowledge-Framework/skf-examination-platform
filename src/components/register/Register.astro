@@ -1,5 +1,5 @@
 ---
-import RegisterInput from "./RegisterInput.svelte";
+import RegisterInput from "../RegisterAndLogin.svelte";
 
 const benefits = [
   {
@@ -47,7 +47,7 @@ const benefits = [
     <p class="small-text">© 2022 Security Knowlegde Framework</p>
   </div>
 </div>
-<RegisterInput client:load />
+<RegisterInput client:load mode="register" />
 
 <style>
   body {

@@ -1,9 +1,12 @@
 <script lang="ts">
+  export let mode: "login" | "register";
+
   import {
     loginWithGithub,
     loginWithGoogle,
-  } from "../../db/users/loginWithProvider";
-  import { registerUser } from "../../db/users/registerUser";
+  } from "../db/users/loginWithProvider";
+  import { registerUser } from "../db/users/registerUser";
+  import { loginUser } from "../db/users/loginUser";
 
   let emailInput = "";
   let passwordInput = "";
@@ -14,35 +17,47 @@
   async function handleSubmit() {
     if (
       passwordInput === "" ||
-      passwordConfirmInput === "" ||
+      (mode === "register" && passwordConfirmInput === "") ||
       emailInput === ""
     ) {
       error = "Please fill out all fields";
       return;
     }
 
-    if (passwordInput !== passwordConfirmInput) {
+    if (mode === "register" && passwordInput !== passwordConfirmInput) {
       error = "Passwords do not match";
       return;
     }
+
+    const registerOrLogin = mode === "register" ? registerUser : loginUser;
 
     const {
       data,
       error: responseError,
       message: messageResponse,
-    } = await registerUser(emailInput, passwordInput);
+    } = await registerOrLogin(emailInput, passwordInput);
 
     if (responseError && messageResponse) {
       error = messageResponse;
       return;
     }
 
-    if (data) {
+    if (mode === "register" && data) {
       message = "User registered successfully";
       setTimeout(() => {
         message = "";
         location.href = "/login";
       }, 3000);
+      return;
+    }
+
+    if (mode === "login" && data) {
+      message = "Login successfully";
+      setTimeout(() => {
+        message = "";
+        location.href = "/dashboard";
+      }, 3000);
+      return;
     }
   }
 </script>
@@ -59,14 +74,20 @@
       <input type="password" id="password" bind:value={passwordInput} />
     </div>
     <div class="item-input">
-      <label for="confirmPassword">Confirm Password:</label>
-      <input
-        type="password"
-        id="confirmPassword"
-        bind:value={passwordConfirmInput}
-      />
+      {#if mode === "register"}
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          bind:value={passwordConfirmInput}
+        />
+      {/if}
     </div>
-    <input class="btn" type="submit" value="Register" />
+    <input
+      class="btn"
+      type="submit"
+      value={mode === "register" ? "Register" : "Login"}
+    />
   </form>
   {#if error}
     <div class="error">{error}</div>

@@ -1,10 +1,10 @@
 ---
 import LoginRegisterLayout from "../layouts/LoginRegisterLayout.astro";
-import FormLogin from "../components/login/FormLogin.astro";
+import FormLogin from "../components/RegisterAndLogin.svelte";
 ---
 
 <LoginRegisterLayout title="SKF | Login">
-  <FormLogin />
+  <FormLogin client:load mode="login" />
 </LoginRegisterLayout>
 
 <style>
