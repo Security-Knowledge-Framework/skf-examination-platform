@@ -1,26 +1,24 @@
 ---
-import Logo from "../svgs/Logo.astro";
+import Logo from "./svgs/Logo.astro";
 import { Nav } from "./Nav";
 import { isUserLoggedIn } from "../db/users/isLogin";
 ---
 
 <nav class="wrapper">
-  <div class="logo">
+  <a href="/" class="logo">
     <Logo />
     <p>SKF</p>
-  </div>
+  </a>
   <Nav client:load />
 </nav>
 
 <style>
-  nav {
-    margin-bottom: 1rem;
+  nav.wrapper {
+    margin-bottom: 2rem;
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     font-weight: 600;
-    color: var(--primary-500);
-
     width: 100%;
   }
 
@@ -29,7 +27,6 @@ import { isUserLoggedIn } from "../db/users/isLogin";
     flex-direction: row;
     align-items: center;
     gap: 1rem;
-    color: var(--primary-500);
     font-weight: 600;
   }
 
@@ -47,8 +44,6 @@ import { isUserLoggedIn } from "../db/users/isLogin";
   }
 
   nav :global(ul a:hover) {
-    border-radius: 1.5em;
-    color: white;
-    background-color: var(--primary-500);
+    text-decoration: underline var(--primary-200);
   }
 </style>

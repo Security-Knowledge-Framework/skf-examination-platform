@@ -1,6 +1,7 @@
 ---
 import { LoadUser } from "../components/LoadUser";
 import Nav from "../components/Nav.astro";
+import BackgroundLogo from "../components/svgs/BackgroundLogo.astro";
 import "../css/base.css";
 
 interface Props {
@@ -20,6 +21,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <div class="logo">
+      <BackgroundLogo />
+    </div>
     <LoadUser client:load />
     <div class="wrapper">
       <slot />
@@ -33,5 +37,11 @@ const { title } = Astro.props;
     flex-direction: row;
     align-items: center;
     height: 100vh;
+    z-index: 10;
+  }
+
+  .logo {
+    position: absolute;
+    z-index: 0;
   }
 </style>

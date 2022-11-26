@@ -1,24 +1,50 @@
 ---
 import { getAllLabs } from "../../db/labs/getAllLabs";
 import Baselayout from "../../layouts/Baselayout.astro";
+import Lab from "../../components/svgs/Lab.astro";
 
 const labs = await getAllLabs();
 ---
 
 <Baselayout title="SKF | ALL LABS">
   <div class="wrapper">
-    <h1>ALL LABS</h1>
+    <h1>LABS</h1>
+
+    <div class="filters">
+      <input type="text" placeholder="Search Lab" />
+
+      <div class="show">
+        <p>Show</p>
+        <select name="" id="">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+    </div>
     <table>
-      <tr><th>N°</th><th>Lab Name</th><th>Level</th><th>Description</th></tr>
+      <tr
+        ><th>#</th><th>Lab Name</th><th>Level</th><th>Description</th><th
+          >Detail</th
+        >
+      </tr>
       {
         labs.map((lab) => (
           <tr>
             <td>{lab.id}</td>
-            <td>
-              <a href={`/labs/${lab.id}`}>{lab.name}</a>
+            <td>{lab.name}</td>
+            <td class="td-icon">
+              <div class="circle">{lab.level}</div>
             </td>
-            <td>{lab.level}</td>
             <td>{lab.description.slice(0, 64) + "..."}</td>
+            <td class="td-icon">
+              <a href={`/labs/${lab.id}`}>
+                <div class="circle">
+                  <Lab />
+                </div>
+              </a>
+            </td>
           </tr>
         ))
       }
@@ -27,36 +53,74 @@ const labs = await getAllLabs();
 </Baselayout>
 
 <style>
-  :global(body) {
-    background: var(--background-gradient);
+  .filters {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 24px;
   }
 
-  .wrapper table {
-    background-color: rgba(255, 255, 255, 0.6);
+  .filters input {
+    color: var(--text-primary);
+    padding: 4px 16px;
+    min-width: 160px;
+    border-radius: 16px;
+    background-color: var(--primary-800);
+    border: 1px solid var(--text-primary);
+    font-family: var(--font-decoration);
+  }
+
+  .filters .show {
+    font-family: var(--font-decoration);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   table tr th {
     text-align: center;
     padding: 0.5rem;
     font-weight: 600;
-    color: white;
-    background-color: var(--primary-500);
+    background-color: var(--primary-900);
   }
 
   table tr td {
     padding: 0.5rem;
   }
 
+  tr td.td-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  td.td-icon .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    background-color: var(--primary-400);
+    width: 1.5rem;
+    border-radius: 32px;
+  }
+
+  table tr {
+    border: none;
+    outline: 0.25px solid var(--text-primary);
+  }
+
   table tr:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.125);
   }
 
   h1 {
     font-weight: 700;
-    color: #515594;
     text-align: center;
     margin-bottom: 2rem;
   }

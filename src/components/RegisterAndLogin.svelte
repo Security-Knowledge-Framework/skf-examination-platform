@@ -7,6 +7,9 @@
   } from "../db/users/loginWithProvider";
   import { registerUser } from "../db/users/registerUser";
   import { loginUser } from "../db/users/loginUser";
+  import GitHub from "./svgs/GitHub.svelte";
+  import Google from "./svgs/Google.svelte";
+  import LogoSvelte from "./svgs/LogoSvelte.svelte";
 
   let emailInput = "";
   let passwordInput = "";
@@ -63,13 +66,16 @@
 </script>
 
 <div class="register-form">
-  {#if mode === "register"}
-    <p>Create an account.</p>
-  {:else}
-    <p>Sign in to your account.</p>
-  {/if}
+  <div class="title">
+    <LogoSvelte />
+    {#if mode === "register"}
+      <p>Create an account.</p>
+    {:else}
+      <p>Sign in to your account.</p>
+    {/if}
+  </div>
 
-  <form class="form" on:submit|preventDefault={handleSubmit}>
+  <form on:submit|preventDefault={handleSubmit}>
     <div class="item-input">
       <label for="email">Email:</label>
       <input type="email" id="email" bind:value={emailInput} />
@@ -78,16 +84,18 @@
       <label for="password">Password:</label>
       <input type="password" id="password" bind:value={passwordInput} />
     </div>
-    <div class="item-input">
-      {#if mode === "register"}
+    {#if mode === "register"}
+      <div class="item-input">
         <label for="confirmPassword">Confirm Password:</label>
         <input
           type="password"
           id="confirmPassword"
           bind:value={passwordConfirmInput}
         />
-      {/if}
-    </div>
+      </div>
+    {:else}
+      <a href="/" class="small-text">Forgot Password?</a>
+    {/if}
     <input
       class="btn"
       type="submit"
@@ -108,8 +116,12 @@
       <div />
     </div>
     <div class="list-social">
-      <button class="sign-with" on:click={loginWithGithub}> Github </button>
-      <button class="sign-with" on:click={loginWithGoogle}> Google </button>
+      <button class="sign-with github" on:click={loginWithGithub}>
+        <GitHub />
+      </button>
+      <button class="sign-with google" on:click={loginWithGoogle}>
+        <Google />
+      </button>
     </div>
     <svg height="10" width="100%">
       <line
@@ -117,10 +129,16 @@
         y1="0"
         x2="100%"
         y2="0"
-        style="stroke:rgb(160,160,160);stroke-width:2"
+        style="stroke:var(--primary-300);stroke-width:2"
       />
     </svg>
   </div>
+
+  {#if mode === "login"}
+    <p class="small-text">
+      Don’t have an account yet? <a href="/register">Sign up</a>
+    </p>
+  {/if}
 </div>
 
 <style>
@@ -128,11 +146,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 2rem;
+    padding: 2rem 3rem;
     gap: 2rem;
-    margin: 40px;
+    margin: auto;
     background-color: var(--primary-700);
     border-radius: 1rem;
+  }
+
+  .register-form .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+
+    font-size: 1rem;
+    font-weight: 600;
   }
 
   .register-form form {
@@ -149,6 +177,12 @@
     width: 100%;
     background-color: var(--primary-400);
     color: var(--text-primary);
+
+    margin-top: 0.5rem;
+  }
+
+  .register-form form .btn:hover {
+    background-color: var(--primary-500);
   }
 
   form .item-input {
@@ -161,6 +195,7 @@
 
   .item-input label {
     font-family: var(--font-decoration);
+    font-size: 14px;
   }
 
   .item-input input {
@@ -174,22 +209,46 @@
   .container-sign-with .title {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .container-sign-with .title p {
+    min-width: fit-content;
+    color: var(--primary-300);
+    text-align: center;
+    font-size: 12px;
   }
 
   .container-sign-with .title div {
     width: 100%;
-    height: 1px;
-    background-color: rgb(160, 160, 160);
+    height: 0.5px;
+    background-color: var(--primary-300);
   }
   .container-sign-with .list-social {
     display: flex;
     flex-direction: row;
     gap: 24px;
+    margin: 16px 0px;
   }
 
   .list-social .sign-with {
     width: 100%;
     border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
     padding: 8px 16px;
+  }
+
+  .list-social .github {
+    background-color: black;
+  }
+
+  .list-social .google {
+    background-color: #db4437;
+  }
+
+  a:hover {
+    text-decoration: underline var(--text-primary);
   }
 </style>
