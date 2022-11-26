@@ -63,7 +63,12 @@
 </script>
 
 <div class="register-form">
-  <p>Create an account.</p>
+  {#if mode === "register"}
+    <p>Create an account.</p>
+  {:else}
+    <p>Sign in to your account.</p>
+  {/if}
+
   <form class="form" on:submit|preventDefault={handleSubmit}>
     <div class="item-input">
       <label for="email">Email:</label>
@@ -119,4 +124,72 @@
 </div>
 
 <style>
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem;
+    gap: 2rem;
+    margin: 40px;
+    background-color: var(--primary-700);
+    border-radius: 1rem;
+  }
+
+  .register-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 16px;
+
+    width: 280px;
+  }
+
+  .register-form form .btn {
+    width: 100%;
+    background-color: var(--primary-400);
+    color: var(--text-primary);
+  }
+
+  form .item-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .item-input label {
+    font-family: var(--font-decoration);
+  }
+
+  .item-input input {
+    background: rgba(245, 245, 245, 0.1);
+    border-radius: 4px;
+    height: 32px;
+    width: 100%;
+    border: none;
+  }
+
+  .container-sign-with .title {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container-sign-with .title div {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(160, 160, 160);
+  }
+  .container-sign-with .list-social {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .list-social .sign-with {
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 8px 16px;
+  }
 </style>
