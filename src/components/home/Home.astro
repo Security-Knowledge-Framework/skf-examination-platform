@@ -1,0 +1,75 @@
+---
+const certificates = [
+  {
+    name: "SKF Certifed Web/API Penetration Testing Specialist",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptas architecto voluptatum numquam dicta, quaerat sint laborum soluta voluptates at corporis deserunt cumque molestiae ducimus deleniti aut dolore provident suscipit officia ipsum eligendi maiores libero! Inventore vero id expedita ducimus praesentium.",
+  },
+  {
+    name: "SKF Certifed Backend Penetration Testing Specialist",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptas architecto voluptatum numquam dicta, quaerat sint laborum soluta voluptates at corporis deserunt cumque molestiae ducimus deleniti aut dolore provident suscipit officia ipsum eligendi maiores libero! Inventore vero id expedita ducimus praesentium.",
+  },
+  {
+    name: "SKF Certifed Backend Penetration Testing Specialist",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptas architecto voluptatum numquam dicta, quaerat sint laborum soluta voluptates at corporis deserunt cumque molestiae ducimus deleniti aut dolore provident suscipit officia ipsum eligendi maiores libero! Inventore vero id expedita ducimus praesentium.",
+  },
+];
+---
+
+<div class="wrapper">
+  <h1>SKF Certifications</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptas
+    architecto voluptatum numquam dicta, quaerat sint laborum soluta voluptates
+    at corporis deserunt cumque molestiae ducimus deleniti aut dolore provident
+    suscipit officia ipsum eligendi maiores libero! Inventore vero id expedita
+    ducimus praesentium.
+  </p>
+  <div class="certificates">
+    {
+      certificates.map((certificate) => (
+        <div class="certificate">
+          <h2>{certificate.name}</h2>
+          <p>{certificate.description}</p>
+          <button>Learn More</button>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .wrapper {
+    --margin: 2.5rem;
+    margin-top: var(--margin);
+  }
+
+  .wrapper h1,
+  .wrapper p {
+    margin-bottom: var(--margin);
+  }
+
+  .wrapper h1 {
+    font-size: 3rem;
+  }
+
+  .certificate {
+    background-color: var(--primary-700);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    margin-bottom: var(--margin);
+  }
+
+  .certificate h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .certificate p {
+    font-size: 1rem;
+  }
+</style>

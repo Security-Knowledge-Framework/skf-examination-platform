@@ -5,21 +5,28 @@
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   src: url("/fonts/OpenSans-ExtraBold.ttf");
   font-weight: 800;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   src: url("/fonts/OpenSans-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url("/fonts/OpenSans-SemiBold.ttf");
   font-weight: 600;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   src: url("/fonts/OpenSans-Regular.ttf");
   font-weight: 400;
   font-display: swap;
@@ -70,14 +77,16 @@ img {
 }
 
 :root {
-  --white: rgb(255, 255, 255);
+  --text-primary: #fff;
 
-  --primary-50: #f5eef8;
-  --primary-200: #bebfd7;
-  --primary-500: #484c84;
-  --primary-700: #2b2e4f;
-  --primary-800: #2b2e4f;
-  --primary-900: #1d1e35;
+  --primary-200: #9799bf;
+  --primary-300: #7477a9;
+  --primary-400: #515594;
+  --primary-500: #414476;
+  --primary-600: #313359;
+  --primary-700: #20223b;
+  --primary-800: #181a2c;
+  --primary-900: #10111e;
 
   --secondary-50: #faf3f4;
   --secondary-200: #f5c6c7;
@@ -110,7 +119,7 @@ body {
   line-height: 140%;
   color: var(--text-primary);
 
-  background-color: var(--primary-900);
+  background-color: var(--primary-800);
 }
 
 button,

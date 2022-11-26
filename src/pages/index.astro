@@ -1,8 +1,10 @@
 ---
+import Home from "../components/home/Home.astro";
 import { LoadUser } from "../components/LoadUser";
 import Baselayout from "../layouts/Baselayout.astro";
 ---
 
 <Baselayout title="SKF">
-  <h1>SKF</h1>
+  <LoadUser />
+  <Home />
 </Baselayout>
