@@ -1,4 +1,6 @@
 ---
+import Progress from "../../../components/lab-sandbox/Progress.svelte";
+import Quizzes from "../../../components/lab-sandbox/Quizzes.svelte";
 import Nav from "../../../components/Nav.astro";
 import { getAllLabs } from "../../../db/labs/getAllLabs";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
@@ -15,7 +17,7 @@ export async function getStaticPaths() {
   }));
 }
 
-// const { id } = Astro.params;
+const { id } = Astro.params;
 const { name } = Astro.props;
 
 const quizzes = [
@@ -269,23 +271,7 @@ const quizzes = [
           eligendi voluptas. Suscipit corporis dolor quaerat aperiam laborum,
           vitae tempore exercitationem magnam nostrum distinctio. Velit.
         </p>
-        <div id="quizzes">
-          <ul>
-            {
-              quizzes.map((quiz) => (
-                <li>
-                  <h4>{quiz.title}</h4>
-                  <p>{quiz.description}</p>
-                  <input type="text" />
-                </li>
-              ))
-            }
-          </ul>
-
-          <p>Lab Flag</p>
-          <input class="input-lab-flag" type="text" />
-          <button>Submit</button>
-        </div>
+        <Quizzes quizzes={quizzes} client:load />
       </div>
       <iframe
         src="https://www.securityknowledgeframework.org/"
@@ -296,11 +282,8 @@ const quizzes = [
         tabindex="0"></iframe>
     </main>
     <footer>
-      <div class="progress">
-        <label for="lab-progress">Lab progress:</label>
-        <progress id="lab-progress" value="0" max="100">0</progress>
-      </div>
-      <a href="#quizzes">Quizzes</a>
+      <Progress client:load />
+      <a href={`/labs/${id && +id + 1}/lab/`} class="next-lab">Next Lab</a>
     </footer>
   </div>
 </BaseLayout>
@@ -348,52 +331,10 @@ const quizzes = [
     overflow-y: auto;
   }
 
-  li {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
   }
-
-  #quizzes {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .input-lab-flag {
-    margin-bottom: 2rem;
-  }
 </style>
-
-<script is:inline>
-  const progessbar = document.getElementById("lab-progress");
-  // Intersection Observer
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          console.log("Element is in view");
-          progessbar.value = 50;
-        } else {
-        }
-      });
-    },
-    {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    }
-  );
-
-  observer.observe(document.querySelector("#quizzes"));
-</script>
