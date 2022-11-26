@@ -1,6 +1,6 @@
 ---
 import { getAllLabs } from "../../db/labs/getAllLabs";
-import Baselayout from "../../layouts/Baselayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const labs = await getAllLabs();
@@ -16,12 +16,29 @@ export async function getStaticPaths() {
 
 // const { id } = Astro.params;
 const { name, description, level } = Astro.props;
+// get url
+const url = Astro.request.url;
 ---
 
-<Baselayout title="SKF | LAB - 1">
+<BaseLayout title={`SKF | LAB - ${name}`}>
   <div class="wrapper">
     <h1>{name}</h1>
     <p>{description}</p>
     <p>Level: {level}</p>
+    <a href={`${url}/lab/`}>Start lab</a>
   </div>
-</Baselayout>
+</BaseLayout>
+
+<style>
+  h1,
+  p,
+  a {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+</style>

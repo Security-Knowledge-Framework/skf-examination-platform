@@ -1,12 +1,12 @@
 ---
 import { getAllLabs } from "../../db/labs/getAllLabs";
-import Baselayout from "../../layouts/Baselayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import Lab from "../../components/svgs/Lab.astro";
 
 const labs = await getAllLabs();
 ---
 
-<Baselayout title="SKF | ALL LABS">
+<BaseLayout title="SKF | ALL LABS">
   <div class="wrapper">
     <h1>LABS</h1>
 
@@ -50,7 +50,7 @@ const labs = await getAllLabs();
       }
     </table>
   </div>
-</Baselayout>
+</BaseLayout>
 
 <style>
   .filters {

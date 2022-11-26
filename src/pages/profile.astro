@@ -1,12 +1,11 @@
 ---
-import Baselayout from "../layouts/Baselayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import { Profile } from "../components/profile/Profile";
 import { Logout } from "../components/profile/Logout";
-import { LoadUser } from "../components/LoadUser";
 ---
 
-<Baselayout title="SKF | Profile">
+<BaseLayout title="SKF | Profile">
   <h1>User Profile</h1>
   <Profile client:load />
   <Logout client:load />
-</Baselayout>
+</BaseLayout>
