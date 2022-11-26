@@ -65,7 +65,7 @@
   }
 </script>
 
-<div class="register-form">
+<div class="form">
   <div class="title">
     <LogoSvelte />
     {#if mode === "register"}
@@ -142,7 +142,7 @@
 </div>
 
 <style>
-  .register-form {
+  .form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,35 +153,31 @@
     border-radius: 1rem;
   }
 
-  .register-form .title {
+  .form .title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
-
     font-size: 1rem;
     font-weight: 600;
   }
 
-  .register-form form {
+  .form form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 0px;
     gap: 16px;
-
-    width: 280px;
+    width: 100%;
   }
 
-  .register-form form .btn {
+  .form form .btn {
     width: 100%;
     background-color: var(--primary-400);
     color: var(--text-primary);
-
     margin-top: 0.5rem;
   }
 
-  .register-form form .btn:hover {
+  .form form .btn:hover {
     background-color: var(--primary-500);
   }
 
@@ -204,6 +200,12 @@
     height: 32px;
     width: 100%;
     border: none;
+    padding: 8px 8px;
+    color: var(--text-primary);
+  }
+
+  input.btn {
+    width: 100%;
   }
 
   .container-sign-with .title {
@@ -225,6 +227,7 @@
     height: 0.5px;
     background-color: var(--primary-300);
   }
+
   .container-sign-with .list-social {
     display: flex;
     flex-direction: row;

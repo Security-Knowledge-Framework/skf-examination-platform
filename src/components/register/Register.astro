@@ -1,5 +1,6 @@
 ---
 import RegisterInput from "../RegisterAndLogin.svelte";
+import Incognito from "../svgs/Incognito.astro";
 
 const benefits = [
   {
@@ -20,58 +21,83 @@ const benefits = [
 ];
 ---
 
-<div class="info">
-  <h3>Security Knowledge Framework</h3>
-  <ul>
-    {
-      benefits.map((benefit) => (
-        <li>
-          <h4>{benefit.title}</h4>
-          <p>{benefit.description}</p>
-        </li>
-      ))
-    }
-  </ul>
+<div class="content">
+  <div class="info">
+    <div class="main">
+      <h3>Security Knowledge Framework</h3>
+      <ul>
+        {
+          benefits.map((benefit) => (
+            <li>
+              <div class="title">
+                <div class="icon">
+                  <Incognito />
+                </div>
+                <h4>{benefit.title}</h4>
+              </div>
+              <p>{benefit.description}</p>
+            </li>
+          ))
+        }
+      </ul>
 
-  <div class="footer">
-    <div class="sign-in">
-      <p>Have an account?</p>
-      <a href="/login">Sign in</a>
-    </div>
+      <div class="footer">
+        <div class="sign-in">
+          <p>Have an account?</p>
+          <a href="/login">Sign in</a>
+        </div>
 
-    <div class="info">
-      <a href="">Contact</a>
-      <a href="">Terms of Service</a>
-      <a href="">Privacy Policy</a>
+        <div class="info">
+          <a href="">Contact</a>
+          <a href="">Terms of Service</a>
+          <a href="">Privacy Policy</a>
+        </div>
+        <p class="small-text">© 2022 Security Knowlegde Framework</p>
+      </div>
     </div>
-    <p class="small-text">© 2022 Security Knowlegde Framework</p>
   </div>
+  <RegisterInput client:load mode="register" />
 </div>
-<RegisterInput client:load mode="register" />
 
 <style>
-  body {
-    background: linear-gradient(
-      to right,
-      var(--primary-700) 0%,
-      var(--primary-700) 50%,
-      var(--primary-800) 0%,
-      var(--primary-800) 50%
-    );
+  :global(body) {
+    background-image: url("/imgs/background-logo.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   .info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    height: 100%;
     width: 50%;
-    color: white;
-    padding: 24px;
+    color: var(--text-primary);
+    padding-right: 3rem;
+    background-color: var(--primary-700);
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .info h3 {
+    font-size: 2rem;
   }
 
   .info ul {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 320px;
-    margin: 48px 0px;
+    gap: 2rem;
   }
 
   ul li .title {
@@ -79,8 +105,31 @@ const benefits = [
     font-size: 16px;
   }
 
+  li {
+    list-style: none;
+  }
+
   li h4 {
     text-align: left;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .icon {
+    display: flex;
+    margin-right: 0.5rem;
+  }
+
+  .icon :global(svg) {
+    fill: var(--text-primary);
+    width: 20px;
+    height: 20px;
   }
 
   .info .sign-in {
@@ -98,6 +147,8 @@ const benefits = [
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
   }
 
   .footer .info {

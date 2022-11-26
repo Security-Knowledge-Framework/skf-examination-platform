@@ -4,5 +4,21 @@ import FormLogin from "../components/RegisterAndLogin.svelte";
 ---
 
 <LoginRegisterLayout title="SKF | Login">
-  <FormLogin client:load mode="login" />
+  <div class="wrapper">
+    <FormLogin client:load mode="login" />
+  </div>
 </LoginRegisterLayout>
+
+<style>
+  :global(body) {
+    background-image: url("/imgs/background-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+</style>
