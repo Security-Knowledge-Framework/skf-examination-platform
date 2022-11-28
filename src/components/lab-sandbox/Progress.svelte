@@ -12,10 +12,16 @@
     easing: cubicOut,
   });
 
+  let finishedLab = false;
+
   labStore.subscribe((lab) => {
+    if (finishedLab) return;
     if (lab["write-up"] || lab.quizz) $progress = 50;
 
-    if (lab["write-up"] && lab.quizz) $progress = 100;
+    if (lab["write-up"] && lab.quizz) {
+      $progress = 100;
+      finishedLab = true;
+    }
   });
 
   onMount(() => {

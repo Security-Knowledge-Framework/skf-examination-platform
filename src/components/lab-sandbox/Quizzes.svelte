@@ -25,7 +25,10 @@
       return;
     }
 
-    if (quizzes.every((quiz) => quiz.answer === "1") && flag === "1") {
+    if (
+      quizzes.every((quiz) => quiz.answer === "1") &&
+      flag === "SKF{1nput_1s_4w3s0m3}"
+    ) {
       message = "Congratulations! You have completed the lab";
       $labStore = { ...$labStore, quizz: true };
     } else {
