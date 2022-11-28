@@ -13,3 +13,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 | `npm run format`       | Formats your code                                |
+| `npm run lint`         | Lints your code                                  |
