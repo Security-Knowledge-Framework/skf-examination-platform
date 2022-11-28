@@ -1,8 +1,14 @@
 ---
 import Register from "../components/register/Register.astro";
-import LoginRegisterLayout from "../layouts/LoginRegisterLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<LoginRegisterLayout title="SKF | Register">
+<BaseLayout title="SKF | Register" loadNav={false}>
   <Register />
-</LoginRegisterLayout>
+</BaseLayout>
+
+<style>
+  :global(html, body) {
+    height: 100%;
+  }
+</style>

@@ -1,15 +1,19 @@
 ---
-import LoginRegisterLayout from "../layouts/LoginRegisterLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import FormLogin from "../components/RegisterAndLogin.svelte";
 ---
 
-<LoginRegisterLayout title="SKF | Login">
+<BaseLayout title="SKF | Login" loadNav={false}>
   <div class="wrapper">
     <FormLogin client:load mode="login" />
   </div>
-</LoginRegisterLayout>
+</BaseLayout>
 
 <style>
+  :global(html, body) {
+    height: 100%;
+  }
+
   :global(body) {
     background-image: url("/imgs/background-logo.svg");
     background-repeat: no-repeat;
