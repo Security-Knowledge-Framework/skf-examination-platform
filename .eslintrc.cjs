@@ -11,8 +11,6 @@ module.exports = {
   ],
   rules: {
     "no-console": ["error", { allow: ["warn", "error"] }],
-    "@typescript-eslint/no-misused-promises": "error",
-    "@typescript-eslint/no-floating-promises": "error",
   },
   overrides: [
     {
@@ -33,10 +31,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    project: "./tsconfig.json",
   },
   plugins: ["svelte3", "@typescript-eslint"],
-  ignorePatterns: ["**/dist/**/*", ".eslintrc.cjs"],
+  ignorePatterns: ["**/dist/**/*"],
   settings: {
     "svelte3/typescript": true, // load TypeScript as peer dependency
   },
