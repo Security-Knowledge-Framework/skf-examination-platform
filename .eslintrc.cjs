@@ -9,6 +9,11 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:astro/recommended",
   ],
+  rules: {
+    "no-console": ["error", { allow: ["warn", "error"] }],
+    "@typescript-eslint/no-misused-promises": "error",
+    "@typescript-eslint/no-floating-promises": "error",
+  },
   overrides: [
     {
       files: ["*.astro"],
@@ -28,12 +33,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
+    project: "./tsconfig.json",
   },
   plugins: ["svelte3", "@typescript-eslint"],
-  ignorePatterns: ["**/dist/**/*"],
-  rules: {
-    "no-console": ["error", { allow: ["warn", "error"] }],
-  },
+  ignorePatterns: ["**/dist/**/*", ".eslintrc.cjs"],
   settings: {
     "svelte3/typescript": true, // load TypeScript as peer dependency
   },

@@ -28,4 +28,7 @@ async function saveLabs() {
   await writeFile("./src/data/labs.json", json, "utf8");
 }
 
-saveLabs();
+saveLabs()
+  // eslint-disable-next-line no-console
+  .then(() => console.log("Labs saved"))
+  .catch((err) => console.error(err));
