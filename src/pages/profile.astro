@@ -1,11 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Profile } from "../components/profile/Profile";
-import { Logout } from "../components/profile/Logout";
+import Profile from "../components/profile/Profile.svelte";
 ---
 
 <BaseLayout title="SKF | Profile">
-  <h1>User Profile</h1>
-  <Profile client:load />
-  <Logout client:load />
+  <div class="wrapper">
+    <Profile client:load />
+  </div>
 </BaseLayout>

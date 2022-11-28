@@ -1,6 +1,6 @@
 ---
 import Logo from "./svgs/Logo.astro";
-import { Nav } from "./Nav";
+import Nav from "./Nav.svelte";
 ---
 
 <nav class="wrapper">
@@ -27,22 +27,5 @@ import { Nav } from "./Nav";
     align-items: center;
     gap: 1rem;
     font-weight: 600;
-  }
-
-  nav :global(ul) {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  nav :global(ul a) {
-    padding: 1em 1.2em;
-  }
-
-  nav :global(ul a:hover) {
-    text-decoration: underline var(--primary-200);
   }
 </style>

@@ -1,4 +1,3 @@
-import { setUser } from "../../stores/user";
 import { supabase } from "../db";
 
 export async function getUserData() {
@@ -9,5 +8,5 @@ export async function getUserData() {
     return;
   }
 
-  setUser(data.user);
+  return data.user;
 }

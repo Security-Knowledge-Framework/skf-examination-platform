@@ -12,17 +12,16 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check:ts": "tsc --noEmit",
     "format": "prettier --write .",
     "check:format": "prettier --check .",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.svelte,.astro",
     "generate:json": "tsx ./src/scripts/fetchLabs.ts"
   },
   "dependencies": {
-    "@astrojs/solid-js": "^1.2.3",
     "@astrojs/svelte": "^1.0.2",
     "@supabase/supabase-js": "^2.1.1",
     "astro": "^1.6.10",
-    "solid-js": "^1.6.2",
     "svelte": "^3.53.1"
   },
   "devDependencies": {
