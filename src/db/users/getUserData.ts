@@ -5,7 +5,7 @@ export async function getUserData() {
   const { data, error } = await supabase.auth.getUser();
 
   if (error) {
-    console.log("error", error);
+    console.error("error", error);
     return;
   }
 

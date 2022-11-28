@@ -31,7 +31,9 @@ module.exports = {
   },
   plugins: ["svelte3", "@typescript-eslint"],
   ignorePatterns: ["**/dist/**/*"],
-  rules: {},
+  rules: {
+    "no-console": ["error", { allow: ["warn", "error"] }],
+  },
   settings: {
     "svelte3/typescript": true, // load TypeScript as peer dependency
   },

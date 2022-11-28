@@ -31,7 +31,6 @@
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("Element is in view");
             $labStore = { ...$labStore, "write-up": true };
           }
         });

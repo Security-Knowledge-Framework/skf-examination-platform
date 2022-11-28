@@ -3,7 +3,7 @@ import { getApiKey } from "../utils/consts";
 
 async function fetchLabs() {
   const apiKey = await getApiKey();
-  if (!apiKey) return console.log("Error getting API key");
+  if (!apiKey) return console.error("Error getting API key");
   const url = "https://ccsgfooankckfqpmcfyb.supabase.co/rest/v1/labs?select=*";
   const headers = {
     apikey: apiKey,
@@ -21,7 +21,7 @@ async function fetchLabs() {
 // save the labs to the json file
 async function saveLabs() {
   const labs = await fetchLabs();
-  if (!labs) return console.log("Error fetching labs");
+  if (!labs) return console.error("Error fetching labs");
 
   const json = JSON.stringify(labs, null, 2);
 
