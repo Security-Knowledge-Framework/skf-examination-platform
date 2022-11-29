@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import DashboardHeader from "../components/dashboard/DashboardHeader.astro";
 import DashboardLabs from "../components/dashboard/DashboardLabs.astro";
 import DashboardRecommend from "../components/dashboard/DashboardRecommend.astro";
+import Matrix from "../components/dashboard/Matrix.svelte";
 ---
 
 <BaseLayout title="SKF | Dashboard">
@@ -10,4 +11,5 @@ import DashboardRecommend from "../components/dashboard/DashboardRecommend.astro
   <DashboardHeader />
   <DashboardLabs />
   <DashboardRecommend />
+  <Matrix client:load />
 </BaseLayout>
