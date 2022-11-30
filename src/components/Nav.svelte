@@ -1,9 +1,11 @@
 <script lang="ts">
+  import { logout } from "../db/users/logout";
   import { user } from "../stores/user";
 
   let showMenu = false;
 
-  function logoutHandler() {
+  async function logoutHandler() {
+    await logout();
     user.set(null);
     location.href = "/";
   }
@@ -12,26 +14,15 @@
     showMenu = !showMenu;
   }
 
-  function closeMenu() {
-    showMenu = false;
-  }
-
-  export function clickOutside(node: Node) {
-    const handleClick = (event: Event) => {
-      if (event.target && !node.contains(event.target as Node)) {
-        node.dispatchEvent(new CustomEvent("outclick"));
-      }
-    };
-
-    document.addEventListener("click", handleClick, true);
-
-    return {
-      destroy() {
-        document.removeEventListener("click", handleClick, true);
-      },
-    };
+  function clickOutside(e: Event) {
+    const el = e.target as HTMLElement;
+    if (!el.classList.contains("toggle")) {
+      showMenu = false;
+    }
   }
 </script>
+
+<svelte:body on:click={clickOutside} />
 
 <ul>
   <li>
@@ -50,8 +41,6 @@
     <li
       class="toggle"
       on:click={toggleMenu}
-      use:clickOutside
-      on:outclick={closeMenu}
       on:keypress={(e) => e.key === "Enter" && toggleMenu()}
     >
       ▼
