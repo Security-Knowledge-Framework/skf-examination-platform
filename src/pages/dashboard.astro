@@ -1,15 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DashboardHeader from "../components/dashboard/DashboardHeader.astro";
-import DashboardLabs from "../components/dashboard/DashboardLabs.astro";
+// import DashboardLabs from "../components/dashboard/DashboardLabs.astro";
 import DashboardRecommend from "../components/dashboard/DashboardRecommend.astro";
 import Matrix from "../components/dashboard/Matrix.svelte";
 ---
 
 <BaseLayout title="SKF | Dashboard">
-  <h1>Dashboard</h1>
-  <DashboardHeader />
-  <DashboardLabs />
-  <DashboardRecommend />
-  <Matrix client:load />
+  <div class="wrapper">
+    <DashboardHeader />
+    <!-- <DashboardLabs /> -->
+    <DashboardRecommend />
+    <Matrix client:load />
+  </div>
 </BaseLayout>

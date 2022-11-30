@@ -1,86 +1,160 @@
 ---
-const name = "Fiorela";
+const name = "John";
+
 const lastLab = {
   name: "HTML injection",
   url: "/",
 };
-const numbers = {
-  labs: 20,
-  hours: 16.4,
+
+const userProgress = {
+  labs: 15,
+  hours: 10,
+  quizzes: 45,
+  certificates: 1,
 };
+
+type keys = keyof typeof userProgress;
 ---
 
 <div class="dashboard-header">
   <div class="welcome">
-    <p>Hi, {name}</p>
-    <p>
+    <p class="greetings">Hi, {name}</p>
+    <p class="dashboard-info">
       Welcome to the new "Dashboard" here at SKF. This will be your hub to all
-      the labs we offer and your learning progress.<br />
+      the labs we offer and your learning progress.
+      <br />
+      <br />
       We hope you will continue to learn with us.
     </p>
     <div class="links">
-      <a href={lastLab.url}>Continue {lastLab.name}</a>
-      <a href="/">Browse Labs</a>
+      <a class="btn" href={lastLab.url}>Continue {lastLab.name}</a>
+      <a class="btn" href="/">Browse Labs</a>
     </div>
   </div>
 
-  <div class="goals">
+  <div class="goals-wrapper">
     <p>Good job!</p>
-    <div class="week">
-      <h5>This Week</h5>
-      <p>{1} days</p>
-      <ul>
-        <li>M</li>
-        <li>T</li>
-        <li>W</li>
-        <li>T</li>
-        <li>F</li>
-        <li>S</li>
-        <li>S</li>
-      </ul>
-    </div>
-    <div class="numbers">
-      <div class="item-number">
-        {numbers.labs + (numbers.labs == 1 ? " lab" : " labs")}
-      </div>
-      <div class="item-number">
-        {numbers.hours + (numbers.hours == 1 ? " hour" : " hours")}
-      </div>
+    <div class="goals">
+      {
+        Object.keys(userProgress).map((key) => (
+          <div class="goal">
+            <div class="title">{key}</div>
+            <div class="value">{userProgress[key as keys]}</div>
+            <div class="line" />
+          </div>
+        ))
+      }
     </div>
   </div>
 </div>
 
 <style>
   .dashboard-header {
-    width: 100%;
-    border: 1px solid;
+    --border: 0.5px solid var(--text-primary);
+  }
 
+  .dashboard-header {
     display: flex;
-    flex-direction: row;
+    border: var(--border);
     position: relative;
+    width: 100%;
+    margin: 4rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
   }
 
   .dashboard-header .welcome {
     width: 50%;
-    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dashboard-header .welcome .greetings {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .dashboard-header .goals-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2.5rem;
+    background-color: var(--primary-600);
+    border: var(--border);
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 125%;
   }
 
   .dashboard-header .goals {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    padding: 24px;
-    background-color: aliceblue;
-    border: 1px solid;
-    position: absolute;
-    top: -24px;
-    right: 120px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
-  .goals ul {
+  .dashboard-header .goal {
+    border: var(--border);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    padding-right: 1.5rem;
     display: flex;
-    flex-direction: row;
-    gap: 8px;
-    list-style: none;
+    gap: 2rem;
+  }
+
+  .dashboard-header .links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dashboard-header .goal .title {
+    /* font-size: 1rem; */
+    /* font-weight: 600; */
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+
+  .dashboard-header .goal .value {
+    /* font-size: 1.5rem; */
+    font-weight: 700;
+    width: 100%;
+    text-align: right;
+  }
+
+  .dashboard-header .goal .line {
+    height: 150%;
+    width: 0.5rem;
+    background-color: var(--secondary-500);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .dashboard-header .links .btn {
+    width: 48%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-600);
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .dashboard-header .links .btn:hover {
+    background-color: var(--primary-500);
+  }
+
+  .dashboard-header .links .btn:active {
+    background-color: var(--primary-700);
   }
 </style>

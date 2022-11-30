@@ -113,13 +113,24 @@
 </script>
 
 <div class="wrapper">
+  <h3>Your progress</h3>
   <canvas id="myChart" bind:this={chart} />
 </div>
 
 <style>
   .wrapper {
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
   }
 </style>

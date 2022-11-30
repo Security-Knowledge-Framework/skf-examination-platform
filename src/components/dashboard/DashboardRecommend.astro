@@ -1,38 +1,134 @@
 ---
+import FlaskIcon from "../svgs/Lab.astro";
+
 const labsRecommended = [
-  { level: "Level 1", name: "HTML Level 1", url: "/" },
-  { level: "Level 2", name: "HTML Level 2", url: "/" },
+  {
+    level: "Level 1",
+    name: "Path traversal (LFI)",
+    description: "Local File Inclusion (also known as LFI) is the proces...",
+    url: "/",
+  },
+  {
+    level: "Level 1",
+    name: "Path traversal (LFI)",
+    description: "Local File Inclusion (also known as LFI) is the proces...",
+    url: "/",
+  },
+  {
+    level: "Level 1",
+    name: "Path traversal (LFI)",
+    description: "Local File Inclusion (also known as LFI) is the proces...",
+    url: "/",
+  },
+  {
+    level: "Level 1",
+    name: "Path traversal (LFI)",
+    description: "Local File Inclusion (also known as LFI) is the proces...",
+    url: "/",
+  },
 ];
 ---
 
-<div class="recommended">
+<section>
   <h3>Recommended For You</h3>
-  <div class="list-rec">
+  <div class="recomendations">
     {
       labsRecommended.map((lab) => (
-        <div class="item-rec">
-          <p>{lab.name}</p>
-          <p>{lab.level}</p>
-
-          <a href={lab.url}>Start</a>
+        <div class="recomendation">
+          <div class="icon-wrapper">
+            <div class="flask-icon">
+              <FlaskIcon />
+            </div>
+          </div>
+          <div class="info">
+            <p class="level">{lab.level}</p>
+            <p class="name">{lab.name}</p>
+            <p class="description">{lab.description}</p>
+            <a href={lab.url}>Start</a>
+          </div>
         </div>
       ))
     }
   </div>
-</div>
+</section>
 
 <style>
-  .list-rec {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-
-    gap: 24px;
+  section {
+    --border: 0.5px solid var(--text-primary);
+    margin-bottom: 4rem;
   }
 
-  .list-rec .item-rec {
-    width: 25%;
-    padding: 16px;
-    border: 1px solid;
+  h3 {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+
+  .recomendations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .recomendation {
+    border: var(--border);
+    border-radius: 0.5rem;
+    background-color: var(--primary-600);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-wrapper,
+  .info {
+    padding: 1.5rem;
+  }
+
+  .flask-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--primary-400);
+    border-radius: 50%;
+  }
+
+  .flask-icon :global(svg) {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .flask-icon :global(svg path) {
+    fill: var(--text-primary);
+  }
+
+  .info {
+    border-top: var(--border);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .level {
+    font-size: 0.8rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .info a {
+    font-size: 1rem;
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-align: right;
   }
 </style>
