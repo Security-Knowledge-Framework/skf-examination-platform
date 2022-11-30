@@ -1,26 +1,26 @@
 ---
 import { getAllLabs } from "../../db/labs/getAllLabs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { checkSession } from "../../utils/checkSession";
 
-export async function getStaticPaths() {
-  const labs = await getAllLabs();
-  return labs.map((lab) => ({
-    params: {
-      id: lab.id,
-    },
-    props: {
-      ...lab,
-    },
-  }));
+const labs = await getAllLabs();
+const url = Astro.request.url;
+const { id } = Astro.params;
+const lab = labs.find((lab) => lab.id == id);
+
+const cookie = Astro.request.headers.get("cookie");
+const isLoggedin = checkSession(cookie);
+
+if (!lab) {
+  return new Response(null, {
+    status: 404,
+  });
 }
 
-// const { id } = Astro.params;
-const { name, description, level } = Astro.props;
-// get url
-const url = Astro.request.url;
+const { name, description, level } = lab;
 ---
 
-<BaseLayout title={`SKF | LAB - ${name}`}>
+<BaseLayout title={`SKF | LAB - ${name}`} isLoggedin={isLoggedin}>
   <div class="wrapper">
     <h1>{name}</h1>
     <p>{description}</p>

@@ -6,5 +6,6 @@ export async function logout() {
     console.error(error);
     return { error: true, message: error.message };
   }
+  document.cookie = "loggedIn=false";
   return { error: false };
 }

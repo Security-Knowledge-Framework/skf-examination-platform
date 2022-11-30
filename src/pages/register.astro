@@ -1,9 +1,14 @@
 ---
 import Register from "../components/register/Register.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { checkSession } from "../utils/checkSession";
+
+const cookie = Astro.request.headers.get("cookie");
+const isLoggedin = checkSession(cookie);
 ---
 
-<BaseLayout title="SKF | Register" loadNav={false}>
+<BaseLayout title="SKF | Register" loadNav={false} isLoggedin={isLoggedin}>
   <Register />
 </BaseLayout>
 

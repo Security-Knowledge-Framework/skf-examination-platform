@@ -1,10 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Profile from "../components/profile/Profile.svelte";
+import { checkSession } from "../utils/checkSession";
+
+const cookie = Astro.request.headers.get("cookie");
+const isLoggedin = checkSession(cookie);
 ---
 
-<BaseLayout title="SKF | Profile">
+<BaseLayout title="SKF | Profile" isLoggedin={isLoggedin}>
   <div class="wrapper">
-    <Profile client:load />
+    <Profile client:load isLoggedin={isLoggedin} />
   </div>
 </BaseLayout>

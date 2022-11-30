@@ -10,6 +10,8 @@ export async function loginWithProvider(provider: Provider) {
     console.error(error);
     return { data, error: true, message: error.message };
   }
+
+  document.cookie = "loggedIn=true";
   return { data, error: false };
 }
 

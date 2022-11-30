@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { user } from "../../stores/user";
+  // import { user } from "../../stores/user";
   import User from "../svgs/User.svelte";
+  export let isLoggedin = false;
 </script>
 
-{#if $user}
+{#if isLoggedin}
   <section>
     <div class="info">
       <div class="avatar">

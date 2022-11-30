@@ -2,6 +2,8 @@
   import { logout } from "../db/users/logout";
   import { user } from "../stores/user";
 
+  export let isLoggedin: boolean;
+
   let showMenu = false;
 
   async function logoutHandler() {
@@ -31,7 +33,7 @@
   <li>
     <a href="/labs">Labs</a>
   </li>
-  {#if $user}
+  {#if isLoggedin}
     <li>
       <a href="/dashboard">Dashboard</a>
     </li>

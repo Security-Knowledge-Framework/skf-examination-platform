@@ -19,9 +19,10 @@
     "generate:json": "tsx ./src/scripts/fetchLabs.ts"
   },
   "dependencies": {
+    "@astrojs/node": "^3.1.0",
     "@astrojs/svelte": "^1.0.2",
     "@supabase/supabase-js": "^2.1.1",
-    "astro": "^1.6.10",
+    "astro": "^1.6.11",
     "chart.js": "^4.0.1",
     "svelte": "^3.53.1"
   },

@@ -4,9 +4,13 @@ import DashboardHeader from "../components/dashboard/DashboardHeader.astro";
 // import DashboardLabs from "../components/dashboard/DashboardLabs.astro";
 import DashboardRecommend from "../components/dashboard/DashboardRecommend.astro";
 import Matrix from "../components/dashboard/Matrix.svelte";
+import { checkSession } from "../utils/checkSession";
+
+const cookie = Astro.request.headers.get("cookie");
+const isLoggedin = checkSession(cookie);
 ---
 
-<BaseLayout title="SKF | Dashboard">
+<BaseLayout title="SKF | Dashboard" isLoggedin={isLoggedin}>
   <div class="wrapper">
     <DashboardHeader />
     <!-- <DashboardLabs /> -->

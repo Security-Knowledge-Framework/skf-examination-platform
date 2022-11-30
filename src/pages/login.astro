@@ -1,9 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FormLogin from "../components/RegisterAndLogin.svelte";
+import { checkSession } from "../utils/checkSession";
+
+const cookie = Astro.request.headers.get("cookie");
+const isLoggedin = checkSession(cookie);
 ---
 
-<BaseLayout title="SKF | Login" loadNav={false}>
+<BaseLayout title="SKF | Login" loadNav={false} isLoggedin={isLoggedin}>
   <div class="wrapper">
     <FormLogin client:load mode="login" />
   </div>

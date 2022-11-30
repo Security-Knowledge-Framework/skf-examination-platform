@@ -6,9 +6,10 @@ import "../css/base.css";
 export interface Props {
   title: string;
   loadNav?: boolean;
+  isLoggedin: boolean;
 }
 
-const { title, loadNav = true } = Astro.props;
+const { title, loadNav = true, isLoggedin } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ const { title, loadNav = true } = Astro.props;
   </head>
   <body>
     <LoadUser client:load />
-    {loadNav && <Nav />}
+    {loadNav && <Nav isLoggedin={isLoggedin} />}
     <slot />
   </body>
 </html>

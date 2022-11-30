@@ -1,6 +1,12 @@
 ---
 import Logo from "./svgs/Logo.astro";
 import Nav from "./Nav.svelte";
+
+export interface Props {
+  isLoggedin: boolean;
+}
+
+const { isLoggedin } = Astro.props;
 ---
 
 <nav class="wrapper">
@@ -8,7 +14,7 @@ import Nav from "./Nav.svelte";
     <Logo />
     <p>SKF</p>
   </a>
-  <Nav client:load />
+  <Nav client:load isLoggedin={isLoggedin} />
 </nav>
 
 <style>

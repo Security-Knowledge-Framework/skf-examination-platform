@@ -2,11 +2,15 @@
 import { getAllLabs } from "../../db/labs/getAllLabs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Lab from "../../components/svgs/Lab.astro";
+import { checkSession } from "../../utils/checkSession";
+
+const cookie = Astro.request.headers.get("cookie");
+const isLoggedin = checkSession(cookie);
 
 const labs = await getAllLabs();
 ---
 
-<BaseLayout title="SKF | ALL LABS">
+<BaseLayout title="SKF | ALL LABS" isLoggedin={isLoggedin}>
   <div class="wrapper">
     <h1>LABS</h1>
 

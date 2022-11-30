@@ -1,8 +1,12 @@
 ---
 import Home from "../components/home/Home.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { checkSession } from "../utils/checkSession";
+
+const cookie = Astro.request.headers.get("cookie");
+const isLoggedin = checkSession(cookie);
 ---
 
-<BaseLayout title="SKF">
+<BaseLayout title="SKF" isLoggedin={isLoggedin}>
   <Home />
 </BaseLayout>

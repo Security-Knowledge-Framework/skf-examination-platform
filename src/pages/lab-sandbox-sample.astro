@@ -1,10 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { checkSession } from "../utils/checkSession";
 
 const labName = "Lab";
+
+const cookie = Astro.request.headers.get("cookie");
+const isLoggedin = checkSession(cookie);
 ---
 
-<BaseLayout title={labName} loadNav={false}>
+<BaseLayout title={labName} loadNav={false} isLoggedin={isLoggedin}>
   <header>
     <div class="wrapper">
       <div class="logo">
