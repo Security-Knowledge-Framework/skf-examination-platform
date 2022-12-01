@@ -1,6 +1,8 @@
 import type { APIContext, AstroGlobal } from "astro";
 import { getSupabase } from "../db";
 
+const isDev = import.meta.env.DEV;
+
 export async function getUserData() {
   return await _getUserData();
 }
@@ -15,6 +17,6 @@ async function _getUserData(context?: APIContext | AstroGlobal) {
   const { data, error } = await supabase.auth.getUser();
 
   if (!error) return data.user;
-  console.error("error", error);
+  if (isDev) console.error("error", error);
   return;
 }
