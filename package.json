@@ -16,18 +16,19 @@
     "format": "prettier --write .",
     "check:format": "prettier --check .",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.svelte,.astro",
-    "generate:json": "tsx ./src/scripts/fetchLabs.ts"
+    "generate:json": "tsx ./src/scripts/fetchLabs.ts",
+    "start:server": "node ./dist/server/entry.mjs"
   },
   "dependencies": {
     "@astrojs/node": "^3.1.0",
     "@astrojs/svelte": "^1.0.2",
+    "@supabase/auth-helpers-shared": "^0.2.3",
     "@supabase/supabase-js": "^2.1.1",
     "astro": "^1.6.11",
     "chart.js": "^4.0.1",
     "svelte": "^3.53.1"
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "dotenv": "^16.0.3",

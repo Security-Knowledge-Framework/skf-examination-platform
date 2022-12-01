@@ -1,12 +1,25 @@
+import type { SupabaseClient } from "@supabase/supabase-js";
+import type { APIContext, AstroGlobal } from "astro";
 import { supabase } from "../db";
+import { supabaseSSR } from "../ssr";
 
 export async function getUserData() {
-  const { data, error } = await supabase.auth.getUser();
+  return await _getUserData();
+}
 
-  if (error) {
-    console.error("error", error);
-    return;
-  }
+export async function getUserDataSSR(context: APIContext | AstroGlobal) {
+  return await _getUserData(context);
+}
 
-  return data.user;
+async function _getUserData(context?: APIContext | AstroGlobal) {
+  let sup: SupabaseClient;
+
+  if (!context) sup = supabase;
+  else sup = supabaseSSR(context);
+
+  const { data, error } = await sup.auth.getUser();
+
+  if (!error) return data.user;
+  console.error("error", error);
+  return;
 }

@@ -6,7 +6,6 @@ export async function registerUser(email: string, password: string) {
     password,
   });
   if (error) {
-    // console.log(error);
     return { data, error: true, message: error.message };
   }
   return { data, error: false };

@@ -10,7 +10,7 @@ module.exports = {
     "plugin:astro/recommended",
   ],
   rules: {
-    "no-console": ["error", { allow: ["warn", "error"] }],
+    "no-console": ["warn", { allow: ["warn", "error"] }],
   },
   overrides: [
     {
