@@ -10,6 +10,7 @@
   import GitHub from "./svgs/GitHub.svelte";
   import Google from "./svgs/Google.svelte";
   import LogoSvelte from "./svgs/LogoSvelte.svelte";
+  import { setUserSSRSession } from "../db/users/setUserSSRSession";
 
   let emailInput = "";
   let passwordInput = "";
@@ -47,19 +48,26 @@
 
     if (mode === "register" && data) {
       message = "User registered successfully";
+
       setTimeout(() => {
         message = "";
         location.href = "/login";
       }, 3000);
+
       return;
     }
 
     if (mode === "login" && data) {
       message = "Login successfully";
-      setTimeout(() => {
-        message = "";
-        location.href = "/dashboard";
-      }, 3000);
+
+      const accessToken = data.session?.access_token;
+      const refreshToken = data.session?.refresh_token;
+
+      if (accessToken && refreshToken) {
+        await setUserSSRSession(accessToken, refreshToken);
+      }
+
+      location.href = "/dashboard";
       return;
     }
   }

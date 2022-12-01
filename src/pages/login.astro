@@ -4,6 +4,7 @@ import FormLogin from "../components/RegisterAndLogin.svelte";
 import { checkSession } from "../utils/checkSession";
 
 const isLoggedin = await checkSession(Astro);
+if (isLoggedin) return Astro.redirect("/dashboard");
 ---
 
 <BaseLayout title="SKF | Login" loadNav={false} isLoggedin={isLoggedin}>
