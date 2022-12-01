@@ -4,6 +4,7 @@ import Profile from "../components/profile/Profile.svelte";
 import { checkSession } from "../utils/checkSession";
 
 const isLoggedin = await checkSession(Astro);
+if (!isLoggedin) return Astro.redirect("/login");
 ---
 
 <BaseLayout title="SKF | Profile" isLoggedin={isLoggedin}>
