@@ -3,8 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Profile from "../components/profile/Profile.svelte";
 import { checkSession } from "../utils/checkSession";
 
-const cookie = Astro.request.headers.get("cookie");
-const isLoggedin = checkSession(cookie);
+const isLoggedin = await checkSession(Astro);
 ---
 
 <BaseLayout title="SKF | Profile" isLoggedin={isLoggedin}>

@@ -8,8 +8,7 @@ const url = Astro.request.url;
 const { id } = Astro.params;
 const lab = labs.find((lab) => lab.id == id);
 
-const cookie = Astro.request.headers.get("cookie");
-const isLoggedin = checkSession(cookie);
+const isLoggedin = await checkSession(Astro);
 
 if (!lab) {
   return new Response(null, {

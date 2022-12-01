@@ -2,7 +2,7 @@
   import { getUserData } from "../db/users/getUserData";
   import { user } from "../stores/user";
   import { onMount } from "svelte";
-  import { supabase } from "../db/db";
+  import { supabase } from "../db/client";
 
   onMount(async () => {
     // maybe use onAuthStateChange

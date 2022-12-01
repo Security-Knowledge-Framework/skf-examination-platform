@@ -1,5 +1,5 @@
 ---
-import LoadUser from "../components/LoadUser.svelte";
+import Auth from "../components/Auth.svelte";
 import Nav from "../components/Nav.astro";
 import "../css/base.css";
 
@@ -22,7 +22,7 @@ const { title, loadNav = true, isLoggedin } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <LoadUser client:load />
+    <Auth client:load />
     {loadNav && <Nav isLoggedin={isLoggedin} />}
     <slot />
   </body>

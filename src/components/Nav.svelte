@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { logout } from "../db/users/logout";
+  import { logout, logoutSSR } from "../db/users/logout";
   import { user } from "../stores/user";
 
   export let isLoggedin: boolean;
@@ -8,6 +8,7 @@
 
   async function logoutHandler() {
     await logout();
+    await logoutSSR();
     user.set(null);
     location.href = "/";
   }
@@ -33,7 +34,7 @@
   <li>
     <a href="/labs">Labs</a>
   </li>
-  {#if isLoggedin}
+  {#if isLoggedin || $user}
     <li>
       <a href="/dashboard">Dashboard</a>
     </li>

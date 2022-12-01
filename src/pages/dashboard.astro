@@ -6,8 +6,7 @@ import DashboardRecommend from "../components/dashboard/DashboardRecommend.astro
 import Matrix from "../components/dashboard/Matrix.svelte";
 import { checkSession } from "../utils/checkSession";
 
-const cookie = Astro.request.headers.get("cookie");
-const isLoggedin = checkSession(cookie);
+const isLoggedin = await checkSession(Astro);
 ---
 
 <BaseLayout title="SKF | Dashboard" isLoggedin={isLoggedin}>

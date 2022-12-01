@@ -1,8 +1,7 @@
-import { supabase } from "../db";
+import { supabase } from "../client";
 
 export async function logout() {
   const { error } = await supabase.auth.signOut();
-  await logoutSSR();
 
   if (error) {
     console.error(error);
@@ -11,7 +10,7 @@ export async function logout() {
   return { error: false };
 }
 
-async function logoutSSR() {
+export async function logoutSSR() {
   const response = await fetch("/api/logout", {
     method: "POST",
     body: JSON.stringify({}),

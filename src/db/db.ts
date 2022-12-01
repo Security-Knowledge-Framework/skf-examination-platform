@@ -1,7 +1,8 @@
-import { createClient } from "@supabase/supabase-js";
-import { getApiKey } from "../utils/consts";
+import { supabase } from "./client";
+import { supabaseSSR } from "./ssr";
+import type { APIContext, AstroGlobal } from "astro";
 
-const supabaseUrl = "https://ccsgfooankckfqpmcfyb.supabase.co";
-const supabaseKey = (await getApiKey()) || "";
-
-export const supabase = createClient(supabaseUrl, supabaseKey);
+export function getSupabase(context?: APIContext | AstroGlobal) {
+  if (!context) return supabase;
+  return supabaseSSR(context);
+}

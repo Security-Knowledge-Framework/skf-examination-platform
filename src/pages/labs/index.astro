@@ -4,8 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Lab from "../../components/svgs/Lab.astro";
 import { checkSession } from "../../utils/checkSession";
 
-const cookie = Astro.request.headers.get("cookie");
-const isLoggedin = checkSession(cookie);
+const isLoggedin = await checkSession(Astro);
 
 const labs = await getAllLabs();
 ---

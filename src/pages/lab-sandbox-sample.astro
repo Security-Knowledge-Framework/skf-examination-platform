@@ -4,8 +4,7 @@ import { checkSession } from "../utils/checkSession";
 
 const labName = "Lab";
 
-const cookie = Astro.request.headers.get("cookie");
-const isLoggedin = checkSession(cookie);
+const isLoggedin = await checkSession(Astro);
 ---
 
 <BaseLayout title={labName} loadNav={false} isLoggedin={isLoggedin}>
