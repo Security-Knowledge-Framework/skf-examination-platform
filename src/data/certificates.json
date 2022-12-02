@@ -22,85 +22,95 @@
     "name": "Java Secure software Development expert",
     "description": "The fundamentals are important to master but in the expert certification we go deeper in the rabbit hole. We will cover the different layers of security based on the Application Security Verification Standard (OWASP-ASVS). This certification is to cover all, by verifying you master the advanced cases of developing secure software in Java.",
     "summary": {
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "description": "This exam covers the basics of security, such as what risk management really means. It discusses how to consider security as part of the requirements of a system, and what potential security requirements you might consider. This part then discusses how to design software to be secure, including various secure design principles that will help you avoid bad designs and embrace good ones. It also discusses how to secure your software supply chain, that is, how to more securely select and acquire reused software (including open source software) to enhance security. This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks.",
       "list": [
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum"
+        "What you'll learn",
+        "- Security basics: risk management, the “CIA” triad, and requirements.",
+        "- Secure design principles: what are principles such as “least privilege” and how to apply these principles.",
+        "- Supply chain evaluation: tips on how to choose packages to reuse, and how to reuse them so that you can rapidly be alerted & update.",
+        "- Implementation: You’ll learn how to implement much more secure software. This includes how to do Input validation, process data securely, call out to other programs, and send output. You’ll also learn about more specialized approaches, including some basics of cryptography and handling problems (such as error-handling code).",
+        "- Security Verification: How to examine software, include some key tool types, and how to apply them in continuous integration (CI). This includes learning about security code scanners/static application security testing (SAST) tools, software composition analysis (SCA)/dependency analysis tools, fuzzers, and web application scanners.",
+        "- Threat modeling/Attack modeling: How to consider your system from an attacker’s point of view and how to apply a simple design analysis approach called STRIDE.",
+        "Fielding: How to deploy and operate secure software, handle vulnerability reports, and how to rapidly update when reused components have publicly-known vulnerabilities.",
+        "- Assurance cases & formal methods: The basics of approaches to more strongly analyze and justify that your software is secure."
       ],
-      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+      "footer": "This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks."
     }
   },
   {
     "name": "Python Secure software Development expert",
     "description": "The fundamentals are important to master but in the expert certification we go deeper in the rabbit hole. We will cover the different layers of security based on the Application Security Verification Standard (OWASP-ASVS). This certification is to cover all, by verifying you master the advanced cases of developing secure software in Python.",
     "summary": {
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "description": "This exam covers the basics of security, such as what risk management really means. It discusses how to consider security as part of the requirements of a system, and what potential security requirements you might consider. This part then discusses how to design software to be secure, including various secure design principles that will help you avoid bad designs and embrace good ones. It also discusses how to secure your software supply chain, that is, how to more securely select and acquire reused software (including open source software) to enhance security. This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks.",
       "list": [
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum"
+        "What you'll learn",
+        "- Security basics: risk management, the “CIA” triad, and requirements.",
+        "- Secure design principles: what are principles such as “least privilege” and how to apply these principles.",
+        "- Supply chain evaluation: tips on how to choose packages to reuse, and how to reuse them so that you can rapidly be alerted & update.",
+        "- Implementation: You’ll learn how to implement much more secure software. This includes how to do Input validation, process data securely, call out to other programs, and send output. You’ll also learn about more specialized approaches, including some basics of cryptography and handling problems (such as error-handling code).",
+        "- Security Verification: How to examine software, include some key tool types, and how to apply them in continuous integration (CI). This includes learning about security code scanners/static application security testing (SAST) tools, software composition analysis (SCA)/dependency analysis tools, fuzzers, and web application scanners.",
+        "- Threat modeling/Attack modeling: How to consider your system from an attacker’s point of view and how to apply a simple design analysis approach called STRIDE.",
+        "Fielding: How to deploy and operate secure software, handle vulnerability reports, and how to rapidly update when reused components have publicly-known vulnerabilities.",
+        "- Assurance cases & formal methods: The basics of approaches to more strongly analyze and justify that your software is secure."
       ],
-      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+      "footer": "This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks."
     }
   },
   {
     "name": "NodeJS Secure software Development expert",
     "description": "The fundamentals are important to master but in the expert certification we go deeper in the rabbit hole. We will cover the different layers of security based on the Application Security Verification Standard (OWASP-ASVS). This certification is to cover all, by verifying you master the advanced cases of developing secure software in NodeJS.",
     "summary": {
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "description": "This exam covers the basics of security, such as what risk management really means. It discusses how to consider security as part of the requirements of a system, and what potential security requirements you might consider. This part then discusses how to design software to be secure, including various secure design principles that will help you avoid bad designs and embrace good ones. It also discusses how to secure your software supply chain, that is, how to more securely select and acquire reused software (including open source software) to enhance security. This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks.",
       "list": [
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum"
+        "What you'll learn",
+        "- Security basics: risk management, the “CIA” triad, and requirements.",
+        "- Secure design principles: what are principles such as “least privilege” and how to apply these principles.",
+        "- Supply chain evaluation: tips on how to choose packages to reuse, and how to reuse them so that you can rapidly be alerted & update.",
+        "- Implementation: You’ll learn how to implement much more secure software. This includes how to do Input validation, process data securely, call out to other programs, and send output. You’ll also learn about more specialized approaches, including some basics of cryptography and handling problems (such as error-handling code).",
+        "- Security Verification: How to examine software, include some key tool types, and how to apply them in continuous integration (CI). This includes learning about security code scanners/static application security testing (SAST) tools, software composition analysis (SCA)/dependency analysis tools, fuzzers, and web application scanners.",
+        "- Threat modeling/Attack modeling: How to consider your system from an attacker’s point of view and how to apply a simple design analysis approach called STRIDE.",
+        "Fielding: How to deploy and operate secure software, handle vulnerability reports, and how to rapidly update when reused components have publicly-known vulnerabilities.",
+        "- Assurance cases & formal methods: The basics of approaches to more strongly analyze and justify that your software is secure."
       ],
-      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+      "footer": "This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks."
     }
   },
   {
     "name": "WEB/API Penetration Testing",
     "description": "Everyting is connected and the easiest way is building Web/API Applications to achieve this but they might have serious vulnerabilities. The defacto standard that is used to verify these and used by penetration testing teams is the Web Application Security Testing Guide (OWASP-WSTG). This certification is all about Web/API Application Penetration Testing and finding security holes in those applications.",
     "summary": {
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "description": "This exam covers the basics of security, such as what risk management really means. It discusses how to consider security as part of the requirements of a system, and what potential security requirements you might consider. This part then discusses how to design software to be secure, including various secure design principles that will help you avoid bad designs and embrace good ones. It also discusses how to secure your software supply chain, that is, how to more securely select and acquire reused software (including open source software) to enhance security. This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks.",
       "list": [
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum"
+        "What you'll learn",
+        "- Security basics: risk management, the “CIA” triad, and requirements.",
+        "- Secure design principles: what are principles such as “least privilege” and how to apply these principles.",
+        "- Supply chain evaluation: tips on how to choose packages to reuse, and how to reuse them so that you can rapidly be alerted & update.",
+        "- Implementation: You’ll learn how to implement much more secure software. This includes how to do Input validation, process data securely, call out to other programs, and send output. You’ll also learn about more specialized approaches, including some basics of cryptography and handling problems (such as error-handling code).",
+        "- Security Verification: How to examine software, include some key tool types, and how to apply them in continuous integration (CI). This includes learning about security code scanners/static application security testing (SAST) tools, software composition analysis (SCA)/dependency analysis tools, fuzzers, and web application scanners.",
+        "- Threat modeling/Attack modeling: How to consider your system from an attacker’s point of view and how to apply a simple design analysis approach called STRIDE.",
+        "Fielding: How to deploy and operate secure software, handle vulnerability reports, and how to rapidly update when reused components have publicly-known vulnerabilities.",
+        "- Assurance cases & formal methods: The basics of approaches to more strongly analyze and justify that your software is secure."
       ],
-      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+      "footer": "This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks."
     }
   },
   {
     "name": "Infra Penetration Testing",
     "description": "Everyting is connected and the easiest way is building Web/API Applications to achieve this but they might have serious vulnerabilities. The defacto standard that is used to verify these and used by penetration testing teams is the Web Application Security Testing Guide (OWASP-WSTG). This certification is all about Web/API Application Penetration Testing and finding security holes in those applications.",
     "summary": {
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "description": "This exam covers the basics of security, such as what risk management really means. It discusses how to consider security as part of the requirements of a system, and what potential security requirements you might consider. This part then discusses how to design software to be secure, including various secure design principles that will help you avoid bad designs and embrace good ones. It also discusses how to secure your software supply chain, that is, how to more securely select and acquire reused software (including open source software) to enhance security. This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks.",
       "list": [
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum",
-        "lorem ipsum"
+        "What you'll learn",
+        "- Security basics: risk management, the “CIA” triad, and requirements.",
+        "- Secure design principles: what are principles such as “least privilege” and how to apply these principles.",
+        "- Supply chain evaluation: tips on how to choose packages to reuse, and how to reuse them so that you can rapidly be alerted & update.",
+        "- Implementation: You’ll learn how to implement much more secure software. This includes how to do Input validation, process data securely, call out to other programs, and send output. You’ll also learn about more specialized approaches, including some basics of cryptography and handling problems (such as error-handling code).",
+        "- Security Verification: How to examine software, include some key tool types, and how to apply them in continuous integration (CI). This includes learning about security code scanners/static application security testing (SAST) tools, software composition analysis (SCA)/dependency analysis tools, fuzzers, and web application scanners.",
+        "- Threat modeling/Attack modeling: How to consider your system from an attacker’s point of view and how to apply a simple design analysis approach called STRIDE.",
+        "Fielding: How to deploy and operate secure software, handle vulnerability reports, and how to rapidly update when reused components have publicly-known vulnerabilities.",
+        "- Assurance cases & formal methods: The basics of approaches to more strongly analyze and justify that your software is secure."
       ],
-      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+      "footer": "This is the first of the three courses in the Secure Software Development Fundamentals Professional Certificate program, and was developed by the Open Source Security Foundation (OpenSSF), a project of the Linux Foundation focused on securing the open source ecosystem. The training courses included in this program focus on practical steps that you (as a developer) can take to counter most common kinds of attacks."
     }
   }
 ]
