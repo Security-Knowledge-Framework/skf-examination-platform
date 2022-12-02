@@ -1,25 +1,27 @@
 ---
-import { getAllLabs } from "../../db/labs/getAllLabs";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { checkSession } from "../../utils/checkSession";
+// import { getAllLabs } from "../../db/labs/getAllLabs";
+// import BaseLayout from "../../layouts/BaseLayout.astro";
+// import { checkSession } from "../../utils/checkSession";
 
-const labs = await getAllLabs();
-const url = Astro.request.url;
-const { id } = Astro.params;
-const lab = labs.find((lab) => lab.id == id);
+return Astro.redirect(Astro.url.href + "/lab");
 
-const isLoggedin = await checkSession(Astro);
+// const labs = await getAllLabs();
+// const url = Astro.request.url;
+// const { id } = Astro.params;
+// const lab = labs.find((lab) => lab.id == id);
 
-if (!lab) {
-  return new Response(null, {
-    status: 404,
-  });
-}
+// const isLoggedin = await checkSession(Astro);
 
-const { name, description, level } = lab;
+// if (!lab) {
+//   return new Response(null, {
+//     status: 404,
+//   });
+// }
+
+// const { name, description, level } = lab;
 ---
 
-<BaseLayout title={`SKF | LAB - ${name}`} isLoggedin={isLoggedin}>
+<!-- <BaseLayout title={`SKF | LAB - ${name}`} isLoggedin={isLoggedin}>
   <div class="wrapper jumbotron">
     <div class="pb-8">
       <h1>{name}</h1>
@@ -42,4 +44,4 @@ const { name, description, level } = lab;
     border-radius: 5px;
     padding: 0.5rem;
   }
-</style>
+</style> -->

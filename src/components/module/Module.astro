@@ -1,7 +1,13 @@
-<script lang="ts">
-  import FlaskIcon from "../svgs/Lab.svelte";
-  export let labs: any[];
-  export let certificate: {
+---
+import FlaskIcon from "../svgs/Lab.astro";
+export interface Props {
+  labs: {
+    id: number;
+    name: string;
+    description: string;
+    level: number;
+  }[];
+  certificate: {
     name: string;
     description: string;
     summary: {
@@ -10,7 +16,10 @@
       footer: string;
     };
   };
-</script>
+}
+
+const { certificate, labs } = Astro.props;
+---
 
 <div class="wrapper">
   <header>
@@ -20,6 +29,7 @@
       <p>
         {certificate.description}
       </p>
+      <a href={`/labs/${labs[0].id}`} class="btn">Start now</a>
     </div>
   </header>
 
@@ -29,9 +39,7 @@
       <div class="summary">
         <p>{certificate.summary.description}</p>
         <ul>
-          {#each certificate.summary.list as item}
-            <li>{item}</li>
-          {/each}
+          {certificate.summary.list.map((item) => <li>{item}</li>)}
         </ul>
         <p>{certificate.summary.footer}</p>
       </div>
@@ -39,12 +47,14 @@
     <div class="sidebar">
       <div class="labs">
         <h4>Modules</h4>
-        {#each labs as lab}
-          <div class="lab">
-            <FlaskIcon />
-            <a href={`/labs/${lab.id}`}>{lab.name}</a>
-          </div>
-        {/each}
+        {
+          labs.map((lab) => (
+            <div class="lab">
+              <FlaskIcon />
+              <a href={`/labs/${lab.id}`}>{lab.name}</a>
+            </div>
+          ))
+        }
       </div>
     </div>
   </main>
@@ -72,19 +82,39 @@
   header .info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
     padding: 2rem;
+    gap: 1.5rem;
   }
 
   .info h3 {
     text-align: left;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-600);
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .btn:hover {
+    background-color: var(--primary-500);
+  }
+
+  .btn:active {
+    background-color: var(--primary-700);
   }
 
   main {
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: end;
   }
 
   main .content {
@@ -108,6 +138,11 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+  }
+
+  .summary ul li:first-of-type {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
   }
 
   .summary li {

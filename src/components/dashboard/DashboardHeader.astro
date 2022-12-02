@@ -1,10 +1,18 @@
 ---
 const name = "John";
 
-const lastLab = {
-  name: "HTML injection",
-  url: "/",
-};
+export interface Props {
+  lab: {
+    id: number;
+    name: string;
+    description: string;
+    level: number;
+  };
+}
+
+const { lab } = Astro.props;
+
+const lastLab = { ...lab, url: `/labs/${lab.id}` };
 
 const userProgress = {
   labs: 15,
@@ -28,7 +36,7 @@ type keys = keyof typeof userProgress;
     </p>
     <div class="links">
       <a class="btn" href={lastLab.url}>Continue {lastLab.name}</a>
-      <a class="btn" href="/">Browse Labs</a>
+      <a class="btn" href="/labs">Browse Labs</a>
     </div>
   </div>
 

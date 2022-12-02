@@ -5,6 +5,9 @@ import DashboardHeader from "../components/dashboard/DashboardHeader.astro";
 import DashboardRecommend from "../components/dashboard/DashboardRecommend.astro";
 import Matrix from "../components/dashboard/Matrix.svelte";
 import { checkSession } from "../utils/checkSession";
+import { getAllLabs } from "../db/labs/getAllLabs";
+
+const labs = await getAllLabs();
 
 const isLoggedin = await checkSession(Astro);
 if (!isLoggedin) return Astro.redirect("/login");
@@ -12,9 +15,9 @@ if (!isLoggedin) return Astro.redirect("/login");
 
 <BaseLayout title="SKF | Dashboard" isLoggedin={isLoggedin}>
   <div class="wrapper">
-    <DashboardHeader />
+    <DashboardHeader lab={labs[5]} />
     <!-- <DashboardLabs /> -->
-    <DashboardRecommend />
+    <DashboardRecommend labs={labs.slice(0, 4)} />
     <Matrix client:load />
   </div>
 </BaseLayout>

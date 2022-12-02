@@ -3,43 +3,50 @@
     "id": 1,
     "name": "Path traversal (LFI)",
     "description": "Local File Inclusion (also known as LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application.",
-    "level": 1
+    "level": 1,
+    "md": "https://raw.githubusercontent.com/blabla1337/skf-labs/master/md/Python/kbid-173-LFI-1.md"
   },
   {
     "id": 2,
     "name": "Cross Site Scripting",
     "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites.",
-    "level": 1
+    "level": 1,
+    "md": "https://raw.githubusercontent.com/blabla1337/skf-labs/master/md/Python/kbid-3-cross-site-scripting.md"
   },
   {
     "id": 3,
     "name": "Cross site scripting (attribute)",
     "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites.",
-    "level": 1
+    "level": 1,
+    "md": "https://raw.githubusercontent.com/blabla1337/skf-labs/master/md/Python/kbid-3-cross-site-scripting-attribute.md"
   },
   {
     "id": 4,
     "name": "Cross site scripting (href)",
     "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites.",
-    "level": 1
+    "level": 1,
+    "md": "https://raw.githubusercontent.com/blabla1337/skf-labs/master/md/Python/kbid-3-cross-site-scripting-href.md"
   },
   {
     "id": 5,
     "name": "Insecure file upload",
     "description": "Insecure File Upload vulnerabilities occur when web applications allow users to upload files to the server. These files can then be used to compromise the application",
-    "level": 1
+    "level": 1,
+    "md": "https://raw.githubusercontent.com/blabla1337/skf-labs/master/md/Python/kbid-13-file-upload.md"
   },
   {
     "id": 6,
     "name": "Clickjacking",
     "description": "Clickjacking is a type of malicious trick that uses multiple transparent or opaque layers to deceive users into clicking on a button or link on another page when they were intending to click on the top level page. This technique is often used for tricking users into clicking on ads",
-    "level": 1
+    "level": 1,
+    "md": "https://raw.githubusercontent.com/blabla1337/skf-labs/master/md/Python/kbid-20-clickjacking.md"
   },
   {
     "id": 7,
     "name": "Rate-limiting",
     "description": "Rate-limiting is a technique used to limit the number of requests a client can make to a server in a given time period. This is done to prevent a client from overwhelming the server with requests",
-    "level": 1
+    "level": 1,
+    "md": "https://raw.githubusercontent.com/blabla1337/skf-labs/master/md/Python/kbid-29-ratelimiting.md"
   },
   {
     "id": 8,

@@ -2,11 +2,11 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { checkSession } from "../../utils/checkSession";
 import certificates from "../../data/certificates.json";
-import Module from "../../components/module/Module.svelte";
+import Module from "../../components/module/Module.astro";
 import { getAllLabsSSR } from "../../db/labs/getAllLabs";
 
 const { id } = Astro.params;
-const certificate = certificates.find((lab) => lab.name == id);
+const certificate = certificates.find((certificate) => certificate.name == id);
 const labs = (await getAllLabsSSR(Astro)).slice(0, 10);
 
 const isLoggedin = await checkSession(Astro);
@@ -21,5 +21,5 @@ const { name } = certificate;
 ---
 
 <BaseLayout title={`SKF | LAB - ${name}`} isLoggedin={isLoggedin}>
-  <Module client:load certificate={certificate} labs={labs} />
+  <Module certificate={certificate} labs={labs} />
 </BaseLayout>

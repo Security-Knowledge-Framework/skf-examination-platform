@@ -1,32 +1,20 @@
 ---
 import FlaskIcon from "../svgs/Lab.astro";
 
-const labsRecommended = [
-  {
-    level: "Level 1",
-    name: "Path traversal (LFI)",
-    description: "Local File Inclusion (also known as LFI) is the proces...",
-    url: "/labs/1",
-  },
-  {
-    level: "Level 1",
-    name: "Path traversal (LFI)",
-    description: "Local File Inclusion (also known as LFI) is the proces...",
-    url: "/labs/1",
-  },
-  {
-    level: "Level 1",
-    name: "Path traversal (LFI)",
-    description: "Local File Inclusion (also known as LFI) is the proces...",
-    url: "/labs/1",
-  },
-  {
-    level: "Level 1",
-    name: "Path traversal (LFI)",
-    description: "Local File Inclusion (also known as LFI) is the proces...",
-    url: "/labs/1",
-  },
-];
+export interface Props {
+  labs: {
+    id: number;
+    name: string;
+    description: string;
+    level: number;
+  }[];
+}
+
+const { labs } = Astro.props;
+
+const labsRecommended = labs.map((lab) => {
+  return { ...lab, url: `/labs/${lab.id}` };
+});
 ---
 
 <section>
@@ -41,9 +29,9 @@ const labsRecommended = [
             </div>
           </div>
           <div class="info">
-            <p class="level">{lab.level}</p>
+            <p class="level">Level {lab.level}</p>
             <p class="name">{lab.name}</p>
-            <p class="description">{lab.description}</p>
+            <p class="description">{lab.description.slice(0, 64) + "..."}</p>
             <a href={lab.url}>Start</a>
           </div>
         </div>
@@ -106,8 +94,9 @@ const labsRecommended = [
   .info {
     border-top: var(--border);
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    height: 100%;
+    align-content: space-around;
   }
 
   .level {
