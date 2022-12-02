@@ -5,6 +5,7 @@ import Nav from "../../../components/NavWrapper.astro";
 import { getAllLabs } from "../../../db/labs/getAllLabs";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { checkSession } from "../../../utils/checkSession";
+import { marked } from "marked";
 
 const labs = await getAllLabs();
 const { id } = Astro.params;
@@ -34,6 +35,57 @@ const quizzes = [
     description: "Quiz 3 description",
   },
 ];
+
+let { md } = lab;
+
+if (!md) {
+  md =
+    "https://raw.githubusercontent.com/blabla1337/skf-labs/master/md/Python/kbid-173-LFI-1.md";
+}
+
+let content = `Local File Inclusion (also known as LFI) is the process of including
+          files, that are already locally present on the server, through the
+          exploiting of vulnerable inclusion procedures implemented in the
+          application. This vulnerability occurs, for example, when a page
+          receives, as input, the path to the file that has to be included and
+          this input is not properly sanitized, allowing directory traversal
+          characters (such as dot-dot-slash) to be injected. Although most
+          examples point to vulnerable PHP scripts, we should keep in mind that
+          it is also common in other technologies such as JSP, ASP and others.`;
+
+function formatText(text: string) {
+  text = text.replace(/{%.*?%}/g, "");
+
+  // replace ![](../../.gitbook/assets/sensitive-info.png) with ![](https://raw.githubusercontent.com/blabla1337/skf-labs/master/.gitbook/assets/sensitive-info.png)
+  text = text.replace(/\(.*?\.gitbook\/assets\/(.*?)\)/g, (match, p1) => {
+    return `(https://raw.githubusercontent.com/blabla1337/skf-labs/master/.gitbook/assets/${p1})`;
+  });
+
+  // replace png>) or jpg>) with png) or jpg)
+  text = text.replace(/(png|jpg)>\)/g, (match, p1) => {
+    return `${p1})`;
+  });
+
+  // encode url from markdown images ![](url)
+  text = text.replace(/!\[(.*?)\]\((.*?)\)/g, (match, p1, p2) => {
+    return `![${p1}](${encodeURI(p2)})`;
+  });
+
+  return text;
+}
+
+function replaceTitle(text: string) {
+  // regex replace text between h1 tag
+  return text.replace(/<h1.*>(.*?)<\/h1>/g, `<h1>${name}</h1>`);
+}
+
+if (md) {
+  const response = await fetch(md);
+  let text = await response.text();
+  text = formatText(text);
+  content = marked.parse(text);
+  content = replaceTitle(content);
+}
 ---
 
 <BaseLayout
@@ -45,21 +97,9 @@ const quizzes = [
     <Nav isLoggedin={isLoggedin} />
     <main>
       <div class="write-up">
-        <h1>{name}</h1>
-        <p>
-          Local File Inclusion (also known as LFI) is the process of including
-          files, that are already locally present on the server, through the
-          exploiting of vulnerable inclusion procedures implemented in the
-          application. This vulnerability occurs, for example, when a page
-          receives, as input, the path to the file that has to be included and
-          this input is not properly sanitized, allowing directory traversal
-          characters (such as dot-dot-slash) to be injected. Although most
-          examples point to vulnerable PHP scripts, we should keep in mind that
-          it is also common in other technologies such as JSP, ASP and others.
-        </p>
+        <article set:html={content} />
         <Quizzes quizzes={quizzes} client:load />
       </div>
-      <!-- src="https://www.securityknowledgeframework.org/" -->
       <iframe
         src={`/lab-sandbox-sample/?lab=${name}`}
         width="100%"
@@ -111,7 +151,7 @@ const quizzes = [
     grid-template-columns: 1fr 1fr;
     height: 100%;
     overflow-y: hidden;
-    gap: 2rem;
+    /* gap: 2rem; */
   }
 
   main > * {
@@ -127,5 +167,41 @@ const quizzes = [
 
   iframe {
     border: none;
+  }
+
+  article {
+    margin-bottom: 4rem;
+  }
+
+  article :global(*) {
+    font-size: 1rem;
+  }
+
+  article :global(h1) {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  article :global(h2) {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  article :global(p) {
+    margin-bottom: 1rem;
+  }
+
+  article :global(a) {
+    color: var(--primary-200);
+    text-decoration: none;
+  }
+
+  article :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  article :global(pre) {
+    margin-bottom: 1rem;
+    overflow: auto;
   }
 </style>

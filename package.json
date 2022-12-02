@@ -26,9 +26,11 @@
     "@supabase/supabase-js": "^2.1.1",
     "astro": "^1.6.11",
     "chart.js": "^4.0.1",
+    "marked": "^4.2.3",
     "svelte": "^3.53.1"
   },
   "devDependencies": {
+    "@types/marked": "^4.0.7",
     "@types/node": "^18.11.10",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
