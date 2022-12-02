@@ -2,10 +2,11 @@
 import Home from "../components/home/Home.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { checkSession } from "../utils/checkSession";
+import certificates from "../data/certificates.json";
 
 const isLoggedin = await checkSession(Astro);
 ---
 
 <BaseLayout title="SKF" isLoggedin={isLoggedin}>
-  <Home />
+  <Home certificates={certificates} />
 </BaseLayout>

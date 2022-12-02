@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Secure software Development Fundamentals",
+    "description": "Modern software is under constant attack, but many software developers have never been told how to effectively counter those attacks. This certification is to cover that problem, by proving you master the fundamentals of developing secure software.",
+    "summary": {
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "list": [
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum"
+      ],
+      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+    }
+  },
+  {
+    "name": "Java Secure software Development expert",
+    "description": "The fundamentals are important to master but in the expert certification we go deeper in the rabbit hole. We will cover the different layers of security based on the Application Security Verification Standard (OWASP-ASVS). This certification is to cover all, by verifying you master the advanced cases of developing secure software in Java.",
+    "summary": {
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "list": [
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum"
+      ],
+      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+    }
+  },
+  {
+    "name": "Python Secure software Development expert",
+    "description": "The fundamentals are important to master but in the expert certification we go deeper in the rabbit hole. We will cover the different layers of security based on the Application Security Verification Standard (OWASP-ASVS). This certification is to cover all, by verifying you master the advanced cases of developing secure software in Python.",
+    "summary": {
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "list": [
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum"
+      ],
+      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+    }
+  },
+  {
+    "name": "NodeJS Secure software Development expert",
+    "description": "The fundamentals are important to master but in the expert certification we go deeper in the rabbit hole. We will cover the different layers of security based on the Application Security Verification Standard (OWASP-ASVS). This certification is to cover all, by verifying you master the advanced cases of developing secure software in NodeJS.",
+    "summary": {
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "list": [
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum"
+      ],
+      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+    }
+  },
+  {
+    "name": "WEB/API Penetration Testing",
+    "description": "Everyting is connected and the easiest way is building Web/API Applications to achieve this but they might have serious vulnerabilities. The defacto standard that is used to verify these and used by penetration testing teams is the Web Application Security Testing Guide (OWASP-WSTG). This certification is all about Web/API Application Penetration Testing and finding security holes in those applications.",
+    "summary": {
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "list": [
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum"
+      ],
+      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+    }
+  },
+  {
+    "name": "Infra Penetration Testing",
+    "description": "Everyting is connected and the easiest way is building Web/API Applications to achieve this but they might have serious vulnerabilities. The defacto standard that is used to verify these and used by penetration testing teams is the Web Application Security Testing Guide (OWASP-WSTG). This certification is all about Web/API Application Penetration Testing and finding security holes in those applications.",
+    "summary": {
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, mollitia!",
+      "list": [
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum",
+        "lorem ipsum"
+      ],
+      "footer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+    }
+  }
+]
