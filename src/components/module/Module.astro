@@ -1,7 +1,12 @@
 ---
 import FlaskIcon from "../svgs/Lab.astro";
 export interface Props {
-  labs: any[];
+  labs: {
+    id: number;
+    name: string;
+    description: string;
+    level: number;
+  }[];
   certificate: {
     name: string;
     description: string;
