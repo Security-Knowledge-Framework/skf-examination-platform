@@ -31,20 +31,14 @@
     "Configuration",
   ];
 
+  const matrixData = labels.map(() => randomNumber());
+
   const data: ChartData = {
     labels: labels,
     datasets: [
       {
         label: "",
-        data: [
-          randomNumber(),
-          randomNumber(),
-          randomNumber(),
-          randomNumber(),
-          randomNumber(),
-          randomNumber(),
-          randomNumber(),
-        ],
+        data: matrixData,
         borderColor: "#20223b",
         // backgroundColor: "#fff",
       },
