@@ -12,7 +12,7 @@ const { isLoggedin } = Astro.props;
 <nav class="wrapper">
   <a href="/" class="logo">
     <Logo />
-    <p>SKF Examination Platform</p>
+    <p class="lt-md:hidden">SKF Examination Platform</p>
   </a>
   <Nav client:load isLoggedin={isLoggedin} />
 </nav>
@@ -33,6 +33,7 @@ const { isLoggedin } = Astro.props;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    flex-shrink: 0;
     font-weight: 600;
   }
 </style>

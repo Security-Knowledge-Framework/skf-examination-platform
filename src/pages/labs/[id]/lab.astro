@@ -7,6 +7,8 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { checkSession } from "../../../utils/checkSession";
 import { marked } from "marked";
 
+import { Editor } from "../../../components/editor/Editor";
+
 const labs = await getAllLabs();
 const { id } = Astro.params;
 const lab = labs.find((lab) => lab.id == id);
@@ -100,6 +102,8 @@ if (md) {
         <article set:html={content} />
         <Quizzes quizzes={quizzes} client:load />
       </div>
+      <Editor value={`const x = "Hello There";\nconsole.log(x)`} client:load />
+      <!-- src="https://www.securityknowledgeframework.org/" -->
       <iframe
         src={`/lab-sandbox-sample/?lab=${name}`}
         width="100%"
@@ -148,10 +152,9 @@ if (md) {
 
   main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     height: 100%;
     overflow-y: hidden;
-    /* gap: 2rem; */
   }
 
   main > * {

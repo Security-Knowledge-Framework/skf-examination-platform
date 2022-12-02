@@ -1,43 +1,17 @@
-@font-face {
-  font-family: "Electrolize";
-  src: url("/fonts/Electrolize-Regular.ttf");
-  font-weight: 400;
-  font-display: swap;
-}
+@import "@acab/reset.css";
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/OpenSans-ExtraBold.ttf");
-  font-weight: 800;
-  font-display: swap;
-}
+@import "@fontsource/manrope";
+@import "@fontsource/lexend-deca";
+@import "@fontsource/electrolize";
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Bold.ttf");
-  font-weight: 700;
-  font-display: swap;
-}
+@import "@fontsource/open-sans";
+@import "@fontsource/open-sans/800";
+@import "@fontsource/open-sans/700";
+@import "@fontsource/open-sans/600";
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/OpenSans-SemiBold.ttf");
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular.ttf");
-  font-weight: 400;
-  font-display: swap;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   min-height: 100%;
@@ -55,7 +29,13 @@ img {
 }
 
 .wrapper {
+  @apply container;
+  margin: 0 auto;
   max-width: 1120px;
+}
+
+.jumbotron {
+  max-width: 85ch;
   margin: 0 auto;
 }
 
@@ -107,8 +87,8 @@ img {
     var(--secondary-500) 31.48%
   );
 
-  --font-heading: "Open Sans", serif;
-  --font-body: "Open Sans", sans-serif;
+  --font-heading: "Lexend Deca", serif;
+  --font-body: "Manrope", sans-serif;
   --font-decoration: "Electrolize", sans-serif;
   --section-padding: 3em;
 }
@@ -117,11 +97,10 @@ body {
   font-family: var(--font-body);
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
   color: var(--text-primary);
 
   background-color: var(--primary-800);
+  @apply text-base leading-7 md:leading-8;
 }
 
 button,

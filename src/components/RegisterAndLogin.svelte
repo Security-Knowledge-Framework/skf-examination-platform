@@ -140,6 +140,12 @@
         style="stroke:var(--primary-300);stroke-width:2"
       />
     </svg>
+    {#if mode === "register"}
+      <div class="sign-in">
+        <p>Have an account?</p>
+        <a href="/login">Sign in</a>
+      </div>
+    {/if}
   </div>
 
   {#if mode === "login"}
@@ -257,6 +263,18 @@
 
   .list-social .google {
     background-color: #db4437;
+  }
+
+  .sign-in {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    @apply items-center justify-center;
+    @apply text-sm;
+  }
+
+  .sign-in a {
+    font-weight: 600;
   }
 
   a:hover {

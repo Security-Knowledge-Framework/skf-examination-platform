@@ -6,14 +6,16 @@ export interface Props {
 const { certificates } = Astro.props;
 ---
 
-<div class="wrapper">
+<div class="wrapper jumbotron">
   <h1>SKF Certifications</h1>
   <p>
     We provide top notch certifications based on our open data and education
     platform where you can train and practise with hand-on labs. We are a
     Non-Profit foundation with the ony focus to create high quality content and
     education to everybody that is interested to improve and learn new skills in
-    Cyber Security. The learning platform <a href="https://secureby.design"
+    Cyber Security.
+    <br /><br />
+    The learning platform <a href="https://secureby.design"
       >Security Knowledge Framework</a
     > can be used to prepare you for the certifications and prove you master the
     knowledge and hand-on skills to make a positive impact.
@@ -56,7 +58,7 @@ const { certificates } = Astro.props;
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--primary-700);
-    padding: 1.25rem;
+    @apply p-4 md:p-8;
     border-radius: 0.5rem;
     margin-bottom: var(--margin);
   }

@@ -42,11 +42,6 @@ const benefits = [
       </ul>
 
       <div class="footer">
-        <div class="sign-in">
-          <p>Have an account?</p>
-          <a href="/login">Sign in</a>
-        </div>
-
         <div class="info">
           <a href="">Contact</a>
           <a href="">Terms of Service</a>
@@ -97,12 +92,13 @@ const benefits = [
   .info ul {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    /* gap: 2rem; */
+    @apply gap-12;
   }
 
   ul li .title {
     font-weight: 600;
-    font-size: 16px;
+    /* font-size: 16px; */
   }
 
   li {
@@ -118,7 +114,8 @@ const benefits = [
   .title {
     display: flex;
     align-items: center;
-    margin-bottom: 0.5rem;
+    @apply text-xl;
+    @apply mb-5;
   }
 
   .icon {

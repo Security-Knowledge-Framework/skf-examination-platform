@@ -60,17 +60,21 @@ const labs = await getAllLabs();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 24px;
+    /* margin: 24px; */
+    @apply py-6;
   }
 
   .filters input {
-    color: var(--text-primary);
     padding: 4px 16px;
     min-width: 160px;
-    border-radius: 16px;
-    background-color: var(--primary-800);
-    border: 1px solid var(--text-primary);
+
     font-family: var(--font-decoration);
+    @apply rounded-md;
+    @apply bg-slate-700;
+    border: 0;
+
+    @apply text-gray-400;
+    @apply placeholder:text-[color:var(--primary)];
   }
 
   .filters .show {
