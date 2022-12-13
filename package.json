@@ -20,8 +20,8 @@
     "start:server": "node ./dist/server/entry.mjs"
   },
   "dependencies": {
-    "@astrojs/node": "^3.1.0",
     "@astrojs/svelte": "^1.0.2",
+    "@astrojs/vercel": "^2.3.6",
     "@supabase/auth-helpers-shared": "^0.2.3",
     "@supabase/supabase-js": "^2.1.1",
     "astro": "^1.6.11",
